@@ -1,14 +1,21 @@
 {
-  "name": "bao-landing-astro_2",
+  "name": "banners-all-over-landing",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.15.1"
+    "astro": "^4.5.0",
+    "@astrojs/tailwind": "^5.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
   }
 }

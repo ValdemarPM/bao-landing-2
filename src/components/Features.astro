@@ -1,0 +1,610 @@
+---
+// Features Component
+---
+
+<section id="features" class="section bg-gray-50">
+  <div class="container-bao">
+    <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+
+    <!-- Two column layout: features list on left, GIF display on right -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      <!-- Left Column: Feature Cards (Icons and Titles only) -->
+      <div class="w-full lg:w-1/3 feature-cards-wrapper">
+        <!-- Mobile scroll indicators -->
+        <div class="scroll-indicator-left lg:hidden"></div>
+        <div class="scroll-indicator-right lg:hidden"></div>
+
+        <!-- Features container -->
+        <div class="feature-cards-container space-y-3 lg:space-y-3">
+          <!-- Smart Scheduling -->
+          <div
+            class="card card-feature group cursor-pointer transition-all duration-300 feature-card"
+            data-feature="0"
+            data-gif="/features_slider-schedule.gif"
+            data-descriptionHighlight="Never miss a campaign deadline "
+            data-description="— Schedule banners to show and hide automatically with precision by date and time."
+          >
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden feature-icon">
+                <img
+                  src="/feature_img_schedule.png"
+                  alt="Smart Scheduling"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Smart Scheduling</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Display Rules -->
+          <div
+            class="card card-feature group cursor-pointer transition-all duration-300 feature-card"
+            data-feature="1"
+            data-gif="/features_slider-rules.gif"
+            data-descriptionHighlight="Show your banners where they are relevant "
+            data-description="— Apply rules based on tags, collections, vendors and more."
+          >
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden feature-icon">
+                <img
+                  src="/feature_img_rules.png"
+                  alt="Display Rules"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Display Rules</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Positioning -->
+          <div
+            class="card card-feature group cursor-pointer transition-all duration-300 feature-card"
+            data-feature="2"
+            data-gif="/features_slider-target.gif"
+            data-descriptionHighlight="Target your banner position wherever you want "
+            data-description="— On the homepage, collections page, product pages, cart, or anywhere else in your e-commerce store."
+          >
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden feature-icon">
+                <img
+                  src="/feature_img_target.png"
+                  alt="Custom Positioning"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Custom Positioning</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced AI Editing -->
+          <div
+            class="card card-feature group cursor-pointer transition-all duration-300 feature-card"
+            data-feature="3"
+            data-gif="/features_slider-ai.gif"
+            data-descriptionHighlight="COMING SOON "
+            data-description="— Fast and easy editing enhanced with powerful AI capabilities that take your banner creation to the next level."
+          >
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg overflow-hidden feature-icon">
+                <img
+                  src="/feature_img_ai.png"
+                  alt="Advanced AI Editing"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Advanced AI Editing</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End feature-cards-container -->
+      </div>
+
+      <!-- Right Column: GIF Display and Description in Single Card -->
+      <div class="w-full lg:w-2/3">
+        <div class="sticky top-24">
+          <!-- Combined GIF and Description Card -->
+          <div
+            class="bg-white rounded-lg shadow-xl overflow-hidden font-[500] border-2 border-bao-gray-100"
+          >
+            <!-- GIF Container with fixed aspect ratio for 626x300 -->
+            <div class="relative bg-gray-50" style="aspect-ratio: 626/300;">
+              <img
+                id="feature-gif"
+                src="/features_slider-schedule.gif"
+                alt="Feature demonstration"
+                class="w-full h-full object-contain transition-opacity duration-300"
+              />
+              <!-- Optional: Loading state -->
+              <div
+                id="gif-loading"
+                class="absolute inset-0 flex items-center justify-center bg-gray-50 hidden"
+              >
+                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-bao-blue-400">
+                </div>
+              </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="p-6">
+              <p id="feature-description" class="text-gray-600 text-lg leading-relaxed">
+                <span
+                  id="description-highlight"
+                  class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-bao-blue-400 via-bao-purple-300 to-bao-gray-300"
+                  >Coming soon:</span
+                >
+                Never miss a campaign deadline - schedule banners to show and hide automatically with
+                precision by date and time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Custom styles for active feature */
+  .feature-card {
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: #e5e7eb;
+    transform: translateX(8px);
+  }
+
+  .feature-card.active {
+    border-color: #1386f2;
+    background: linear-gradient(
+      90deg,
+      rgba(19, 134, 242, 0.05) 0%,
+      rgba(181, 7, 162, 0.05) 50%,
+      rgba(255, 36, 0, 0.05) 100%
+    );
+    transform: translateX(8px);
+  }
+
+  .feature-card.active::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background: linear-gradient(180deg, #1386f2 0%, #b507a2 50%, #ff2400 100%);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* Smooth transition for description text */
+  #feature-description {
+    transition: opacity 0.3s ease;
+  }
+
+  /* Mobile horizontal scroll styles */
+  @media (max-width: 1023px) {
+    .feature-cards-wrapper {
+      position: relative;
+      margin: 0 -1rem; /* Extend to screen edges */
+      padding: 0 1rem;
+    }
+
+    .feature-cards-container {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 1rem !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 0.5rem 0 1.5rem 0;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    .feature-cards-container.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto !important;
+      scroll-snap-type: none !important;
+    }
+
+    .feature-cards-container.dragging .feature-card {
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Hide scrollbar but keep functionality */
+    .feature-cards-container::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .feature-cards-container::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .feature-cards-container::-webkit-scrollbar-thumb {
+      background: linear-gradient(90deg, #1386f2, #b507a2, #ff2400);
+      border-radius: 10px;
+    }
+
+    /* Firefox scrollbar */
+    .feature-cards-container {
+      scrollbar-width: thin;
+      scrollbar-color: #b507a2 #f1f1f1;
+    }
+
+    .feature-card {
+      flex: 0 0 auto;
+      width: 280px;
+      min-width: 280px;
+      scroll-snap-align: center;
+      transform: none !important;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .feature-card.active {
+      transform: none !important;
+      border-color: #1386f2;
+      box-shadow: 0 4px 12px rgba(19, 134, 242, 0.2);
+    }
+
+    .feature-card.active::before {
+      display: none; /* Hide the side indicator on mobile */
+    }
+
+    /* Scroll indicators (gradient overlays) */
+    .scroll-indicator-left,
+    .scroll-indicator-right {
+      position: absolute;
+      top: 0;
+      bottom: 20px;
+      width: 30px;
+      z-index: 10;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .scroll-indicator-left {
+      left: 0;
+      background: linear-gradient(to right, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0));
+    }
+
+    .scroll-indicator-right {
+      right: 0;
+      background: linear-gradient(to left, rgba(249, 250, 251, 1), rgba(249, 250, 251, 0));
+    }
+
+    .scroll-indicator-left.visible,
+    .scroll-indicator-right.visible {
+      opacity: 1;
+    }
+
+    /* Add padding to first and last items for better centering */
+    .feature-card:first-child {
+      margin-left: max(1rem, calc((100vw - 280px) / 2 - 1rem));
+    }
+
+    .feature-card:last-child {
+      margin-right: max(1rem, calc((100vw - 280px) / 2 - 1rem));
+    }
+  }
+
+  /* Desktop responsive adjustments */
+  @media (min-width: 1024px) {
+    .feature-cards-container {
+      display: block !important;
+    }
+
+    .scroll-indicator-left,
+    .scroll-indicator-right {
+      display: none !important;
+    }
+  }
+
+  /* Small mobile adjustments */
+  @media (max-width: 640px) {
+    .feature-card {
+      width: 250px;
+      min-width: 250px;
+    }
+
+    .feature-card:first-child {
+      margin-left: max(1rem, calc((100vw - 250px) / 2 - 1rem));
+    }
+
+    .feature-card:last-child {
+      margin-right: max(1rem, calc((100vw - 250px) / 2 - 1rem));
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const featureCards = document.querySelectorAll('.feature-card');
+    const gifImage = document.getElementById('feature-gif') as HTMLImageElement;
+    const descriptionHighlight = document.getElementById('description-highlight');
+    const featureDescription = document.getElementById('feature-description');
+    const gifLoading = document.getElementById('gif-loading');
+    const container = document.querySelector('.feature-cards-container') as HTMLElement;
+    const leftIndicator = document.querySelector('.scroll-indicator-left') as HTMLElement;
+    const rightIndicator = document.querySelector('.scroll-indicator-right') as HTMLElement;
+    let currentActive = 0;
+    let isLocked = false;
+
+    // Function to update the displayed GIF and description
+    function updateFeature(index: number) {
+      const card = featureCards[index];
+      const gifSrc = card.getAttribute('data-gif');
+      const description = card.getAttribute('data-description');
+
+      // Update active states
+      featureCards.forEach((c, i) => {
+        if (i === index) {
+          c.classList.add('active');
+        } else {
+          c.classList.remove('active');
+        }
+      });
+
+      // Animate GIF change
+      if (gifImage && gifSrc) {
+        // Show loading state briefly for smooth transition
+        gifImage.style.opacity = '0.5';
+
+        setTimeout(() => {
+          gifImage.src = gifSrc;
+          gifImage.style.opacity = '1';
+        }, 150);
+      }
+
+      // Update description with fade effect
+      if (featureDescription && description && descriptionHighlight) {
+        const highlightText = card.getAttribute('data-descriptionHighlight') || '';
+        featureDescription.style.opacity = '0.5';
+        setTimeout(() => {
+          // Update the highlight text
+          descriptionHighlight.textContent = highlightText;
+          // Remove all text nodes after the highlight span
+          while (descriptionHighlight.nextSibling) {
+            descriptionHighlight.nextSibling.remove();
+          }
+          // Add the description text after the highlight span
+          featureDescription.appendChild(document.createTextNode(' ' + description));
+          featureDescription.style.opacity = '1';
+        }, 150);
+      }
+
+      currentActive = index;
+    }
+
+    // Function to scroll to a specific card
+    function scrollToCard(index: number) {
+      if (window.innerWidth < 1024 && container) {
+        const card = featureCards[index] as HTMLElement;
+        if (card) {
+          const cardLeft = card.offsetLeft;
+          const cardWidth = card.offsetWidth;
+          const containerWidth = container.offsetWidth;
+          const scrollPosition = cardLeft - (containerWidth - cardWidth) / 2;
+
+          container.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth',
+          });
+        }
+      }
+    }
+
+    // Update scroll indicators visibility
+    function updateScrollIndicators() {
+      if (window.innerWidth < 1024 && container && leftIndicator && rightIndicator) {
+        const scrollLeft = container.scrollLeft;
+        const scrollWidth = container.scrollWidth;
+        const clientWidth = container.clientWidth;
+
+        // Show/hide left indicator
+        if (scrollLeft > 10) {
+          leftIndicator.classList.add('visible');
+        } else {
+          leftIndicator.classList.remove('visible');
+        }
+
+        // Show/hide right indicator
+        if (scrollLeft < scrollWidth - clientWidth - 10) {
+          rightIndicator.classList.add('visible');
+        } else {
+          rightIndicator.classList.remove('visible');
+        }
+      }
+    }
+
+    // Set initial active state
+    updateFeature(0);
+
+    // Initialize scroll indicators
+    if (container) {
+      container.addEventListener('scroll', updateScrollIndicators);
+      // Initial check
+      setTimeout(updateScrollIndicators, 100);
+    }
+
+    // Update indicators on window resize
+    window.addEventListener('resize', updateScrollIndicators);
+
+    // Add event listeners to each feature card
+    featureCards.forEach((card, index) => {
+      // Hover effect (desktop)
+      card.addEventListener('mouseenter', () => {
+        if (!isLocked) {
+          updateFeature(index);
+        }
+      });
+
+      // Click to lock/unlock
+      card.addEventListener('click', () => {
+        if (currentActive === index && isLocked) {
+          // Unlock if clicking the same card
+          isLocked = false;
+        } else {
+          // Lock to new selection
+          updateFeature(index);
+          isLocked = true;
+
+          // Scroll to the selected card on mobile
+          scrollToCard(index);
+
+          // Auto-unlock after 10 seconds
+          setTimeout(() => {
+            isLocked = false;
+          }, 10000);
+        }
+      });
+    });
+
+    // Reset to first feature when mouse leaves the entire section (only if not locked)
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.addEventListener('mouseleave', () => {
+        if (!isLocked) {
+          // Optional: Reset to first feature
+          // updateFeature(0);
+        }
+      });
+    }
+
+    // Touch support for mobile - prevent hover states from sticking
+    if ('ontouchstart' in window) {
+      featureCards.forEach((card, index) => {
+        card.addEventListener('touchstart', (e) => {
+          e.preventDefault();
+          updateFeature(index);
+          scrollToCard(index);
+        });
+      });
+    }
+
+    // Drag to scroll functionality
+    if (container && window.innerWidth < 1024) {
+      let isDown = false;
+      let startX: number;
+      let scrollLeft: number;
+      let velocity = 0;
+      let rafId: number | null = null;
+      let lastX: number;
+      let lastTime: number;
+
+      // Prevent text selection while dragging
+      container.style.userSelect = 'none';
+      container.style.webkitUserSelect = 'none';
+
+      const startDragging = (e: MouseEvent | TouchEvent) => {
+        isDown = true;
+        container.classList.add('dragging');
+
+        const pageX = 'touches' in e ? e.touches[0].pageX : (e as MouseEvent).pageX;
+        startX = pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+        lastX = pageX;
+        lastTime = Date.now();
+        velocity = 0;
+
+        // Cancel any ongoing momentum
+        if (rafId !== null) {
+          cancelAnimationFrame(rafId);
+          rafId = null;
+        }
+      };
+
+      const stopDragging = () => {
+        isDown = false;
+        container.classList.remove('dragging');
+
+        // Apply momentum scrolling
+        const momentumScroll = () => {
+          if (Math.abs(velocity) > 0.5) {
+            container.scrollLeft += velocity;
+            velocity *= 0.95; // Damping factor
+            rafId = requestAnimationFrame(momentumScroll);
+          } else {
+            rafId = null;
+          }
+        };
+
+        if (Math.abs(velocity) > 1) {
+          momentumScroll();
+        }
+      };
+
+      const doDragging = (e: MouseEvent | TouchEvent) => {
+        if (!isDown) return;
+        e.preventDefault();
+
+        const pageX = 'touches' in e ? e.touches[0].pageX : (e as MouseEvent).pageX;
+        const x = pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5; // Scroll speed multiplier
+        container.scrollLeft = scrollLeft - walk;
+
+        // Calculate velocity for momentum
+        const now = Date.now();
+        const dt = now - lastTime;
+        if (dt > 0) {
+          velocity = ((lastX - pageX) / dt) * 16; // Convert to pixels per frame
+        }
+        lastX = pageX;
+        lastTime = now;
+      };
+
+      // Mouse events
+      container.addEventListener('mousedown', startDragging);
+      container.addEventListener('mouseleave', stopDragging);
+      container.addEventListener('mouseup', stopDragging);
+      container.addEventListener('mousemove', doDragging);
+
+      // Touch events (for better mobile support)
+      container.addEventListener('touchstart', startDragging, { passive: false });
+      container.addEventListener('touchend', stopDragging);
+      container.addEventListener('touchmove', doDragging, { passive: false });
+
+      // Prevent clicking on links while dragging
+      featureCards.forEach((card) => {
+        card.addEventListener(
+          'click',
+          (e) => {
+            if (container.classList.contains('dragging')) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+          },
+          true
+        );
+      });
+    }
+
+    // Update drag functionality on window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && container) {
+        // Disable drag on desktop view
+        container.style.userSelect = '';
+        container.style.webkitUserSelect = '';
+      } else if (container) {
+        // Enable drag on mobile/tablet view
+        container.style.userSelect = 'none';
+        container.style.webkitUserSelect = 'none';
+      }
+    });
+  });
+</script>

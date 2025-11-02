@@ -1,0 +1,95 @@
+---
+// How It Works Component
+---
+
+<section id="how-it-works" class="section">
+  <div class="container-bao">
+    <h2 class="text-4xl font-bold text-center mb-4">How it works</h2>
+    <p class="text-xl text-gray-600 text-center mb-12">Get started in 4 simple steps</p>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Step 1 -->
+      <div class="step-card step-card-1">
+        <div class="gradient-border-overlay"></div>
+        <div class="step-card-inner text-center">
+          <div
+            class="w-12 h-12 bg-bao-gradient rounded-full flex items-center justify-center mx-auto mb-4 animate-float"
+          >
+            <span class="text-xl font-bold text-white">1</span>
+          </div>
+          <h3 class="font-bold mb-2">Click the New banner button</h3>
+          <p class="text-sm text-gray-600">Or duplicate an existing banner</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-card step-card-2">
+        <div class="gradient-border-overlay"></div>
+        <div class="step-card-inner text-center">
+          <div
+            class="w-12 h-12 bg-bao-gradient rounded-full flex items-center justify-center mx-auto mb-4 animate-float animation-delay-100"
+          >
+            <span class="text-xl font-bold text-white">2</span>
+          </div>
+          <h3 class="font-bold mb-2">Place the banner in your store</h3>
+          <p class="text-sm text-gray-600">
+            Choose a target position for your banner ads be visible
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-card step-card-3">
+        <div class="gradient-border-overlay"></div>
+        <div class="step-card-inner text-center">
+          <div
+            class="w-12 h-12 bg-bao-gradient rounded-full flex items-center justify-center mx-auto mb-4 animate-float animation-delay-200"
+          >
+            <span class="text-xl font-bold text-white">3</span>
+          </div>
+          <h3 class="font-bold mb-2">Add a few slides</h3>
+          <p class="text-sm text-gray-600">Add images, text, videos or products to your slides</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-card step-card-4">
+        <div class="gradient-border-overlay"></div>
+        <div class="step-card-inner text-center">
+          <div
+            class="w-12 h-12 bg-bao-gradient rounded-full flex items-center justify-center mx-auto mb-4 animate-float animation-delay-300"
+          >
+            <span class="text-xl font-bold text-white">4</span>
+          </div>
+          <h3 class="font-bold mb-2">Publish your banner</h3>
+          <p class="text-sm text-gray-600">
+            <span class="font-bold">That's it!</span> Your banner is now visible in your store
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer to trigger animation when section is visible
+  const howItWorksSection = document.getElementById('how-it-works');
+
+  if (howItWorksSection) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add class to trigger animations
+            entry.target.classList.add('how-it-works-visible');
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the section is visible
+      }
+    );
+
+    observer.observe(howItWorksSection);
+  }
+</script>

@@ -1,0 +1,389 @@
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Styles */
+@layer base {
+  :root {
+    /* BAO Brand Colors CSS Variables */
+    --bao-blue-400: #1386F2;
+    --bao-blue-500: #074279;
+    --bao-purple-300: #B507A2;
+    --bao-purple-400: #580350;
+    --bao-red-300: #FF2400;
+    --bao-red-400: #801100;
+    --bao-gray-300: #808080;
+    --bao-gray-400: #404040;
+
+    /* Gradient colors */
+    --gradient-start: #074279;
+    --gradient-middle: #B507A2;
+    --gradient-end: #FF2400;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+}
+
+/* Custom Component Classes */
+@layer components {
+
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium text-white transition-all duration-200 rounded-full;
+  }
+
+  /* Primary Gradient Button - BAO Style */
+  .btn-primary {
+    @apply relative overflow-hidden;
+    background: linear-gradient(90deg, #1386F2 0%, #B507A2 50%, #FF2400 100%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(181, 7, 162, 0.3);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Alternative gradient button with animation */
+  .btn-gradient {
+    @apply relative overflow-hidden;
+    background: linear-gradient(90deg, #1386F2, #B507A2, #FF2400, #1386F2);
+    background-size: 300% 100%;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  .btn-gradient:hover {
+    animation-duration: 3s;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(181, 7, 162, 0.4);
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Button Sizes */
+  .btn-xs {
+    @apply px-3 py-1 text-xs;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+
+  .btn-xl {
+    @apply px-10 py-5 text-xl;
+  }
+
+  /* Icon button support */
+  .btn-icon {
+    @apply inline-flex items-center gap-2;
+  }
+
+  /* Pill button (extra rounded) */
+  .btn-pill {
+    @apply rounded-full;
+  }
+
+  /* Square button */
+  .btn-square {
+    @apply rounded-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-bao-purple-300 hover:bg-bao-purple-400 focus:ring-4 focus:ring-bao-purple-200;
+  }
+
+  .btn-danger {
+    @apply bg-bao-red-300 hover:bg-bao-red-400 focus:ring-4 focus:ring-bao-red-200;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 transition-transform hover:scale-105;
+  }
+
+  .card-feature {
+    @apply border-2 border-gray-100 hover:border-bao-blue-400 hover:shadow-xl;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-bao-blue-400 via-bao-purple-300 to-bao-red-300 bg-clip-text text-transparent;
+  }
+
+  /* Container */
+  .container-bao {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section */
+  .section {
+    @apply py-16 lg:py-24;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-sm font-medium rounded-full;
+  }
+
+  .badge-blue {
+    @apply bg-bao-blue-100 text-bao-blue-500;
+  }
+
+  .badge-purple {
+    @apply bg-bao-purple-100 text-bao-purple-400;
+  }
+
+  .badge-red {
+    @apply bg-bao-red-100 text-bao-red-400;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+
+  /* Custom gradient backgrounds */
+  .bg-bao-gradient {
+    background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+  }
+
+  .bg-bao-gradient-soft {
+    background: linear-gradient(90deg, #1386F2 0%, #B507A2 50%, #FF2400 100%);
+  }
+
+  /* Text selection */
+  .selection-bao::selection {
+    @apply bg-bao-blue-400 text-white;
+  }
+
+  /* Custom shadows */
+  .shadow-bao {
+    box-shadow: 0 10px 25px rgba(19, 134, 242, 0.15);
+  }
+
+  .shadow-bao-lg {
+    box-shadow: 0 20px 40px rgba(19, 134, 242, 0.2);
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  /* Animation delays */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  /* Gradient Border Card */
+  .gradient-border-card {
+    position: relative;
+    background: linear-gradient(90deg, #074279 0%, #B507A2 50%, #FF2400 100%);
+    padding: 3px;
+    border-radius: 0.5rem;
+  }
+
+  .gradient-border-card-inner {
+    @apply bg-white rounded-lg p-4;
+    height: 100%;
+  }
+
+  /* Subtle gray border for inactive cards */
+  .subtle-border-card {
+    position: relative;
+    background: #E5E7EB;
+    padding: 3px;
+    border-radius: 0.5rem;
+  }
+
+  .subtle-border-card-inner {
+    @apply bg-white rounded-lg p-4;
+    height: 100%;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Sequential Gradient Border Animation */
+@keyframes gradient-border-step-1 {
+
+  0%,
+  24% {
+    opacity: 1;
+  }
+
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-border-step-2 {
+
+  0%,
+  24% {
+    opacity: 0;
+  }
+
+  25%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-border-step-3 {
+
+  0%,
+  49% {
+    opacity: 0;
+  }
+
+  50%,
+  74% {
+    opacity: 1;
+  }
+
+  75%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes gradient-border-step-4 {
+
+  0%,
+  74% {
+    opacity: 0;
+  }
+
+  75%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply animations to each step card when section is visible */
+.how-it-works-visible .step-card-1 .gradient-border-overlay {
+  animation: gradient-border-step-1 8s ease-in-out infinite;
+}
+
+.how-it-works-visible .step-card-2 .gradient-border-overlay {
+  animation: gradient-border-step-2 8s ease-in-out infinite;
+}
+
+.how-it-works-visible .step-card-3 .gradient-border-overlay {
+  animation: gradient-border-step-3 8s ease-in-out infinite;
+}
+
+.how-it-works-visible .step-card-4 .gradient-border-overlay {
+  animation: gradient-border-step-4 8s ease-in-out infinite;
+}
+
+/* Card wrapper with transparent border by default */
+.step-card {
+  position: relative;
+  background: transparent;
+  padding: 2px;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Gradient border overlay (hidden by default, shown via animation) */
+.gradient-border-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #074279 0%, #B507A2 50%, #FF2400 100%);
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.step-card-inner {
+  position: relative;
+  background: white;
+  border-radius: 0.4rem;
+  padding: 3rem;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .mobile-menu {
+    @apply fixed inset-0 z-50 bg-white;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

@@ -1,0 +1,72 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Banner Settings">
+  <div class="docs-content">
+    <h1>Banner Settings</h1>
+
+    <h2>Scheduler</h2>
+    <p>Configure when your banner appears:</p>
+    <ul>
+      <li><strong>Permanent visibility</strong> - Always visible (default)</li>
+      <li>
+        <strong>Date range</strong> - Set specific start and end dates/times
+        <ul>
+          <li>Start date: Day/Month/Year and Hour</li>
+          <li>End date: Day/Month/Year and Hour</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> Schedule banners in advance for holiday sales, product launches, or time-limited promotions to automate your marketing campaigns.</p>
+    </div>
+
+    <hr />
+
+    <h2>Display Options</h2>
+    <p>Customize banner appearance:</p>
+    <ul>
+      <li>Animation type selection</li>
+      <li>Animation speed control</li>
+      <li>Show/hide navigation arrows</li>
+      <li>Show/hide navigation dots</li>
+    </ul>
+
+    <div class="docs-note">
+      <p><strong>Note:</strong> Choose animations that match your brand style. Subtle animations often perform better than flashy ones.</p>
+    </div>
+
+    <hr />
+
+    <h2>Playback Options</h2>
+    <p>Control banner interaction:</p>
+    <ul>
+      <li><strong>Auto-play</strong> - Enable/disable automatic slide progression</li>
+      <li><strong>Pause on hover</strong> - Stop animation when mouse hovers over banner</li>
+      <li><strong>Loop</strong> - Continuous playback of slides</li>
+      <li><strong>Interval time</strong> - Duration each slide is displayed</li>
+    </ul>
+
+    <div class="docs-info">
+      <h3>Recommended Settings</h3>
+      <ul>
+        <li><strong>Interval time:</strong> 5-7 seconds per slide gives users enough time to read content</li>
+        <li><strong>Pause on hover:</strong> Enable this to let users control their viewing experience</li>
+        <li><strong>Auto-play:</strong> Great for hero banners, but consider disabling for informational content</li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div class="mt-12 flex gap-4">
+      <a href="/docs/slide-types" class="btn bg-gray-200 text-gray-700 hover:bg-gray-300">
+        ← Previous: Slide Types
+      </a>
+      <a href="/docs/placement" class="btn btn-primary">
+        Next: Banner Placement →
+      </a>
+    </div>
+  </div>
+</DocsLayout>

@@ -1,0 +1,65 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Main Dashboard">
+  <div class="docs-content">
+    <h1>Main Dashboard</h1>
+
+    <h2>Banner Management Section</h2>
+    <p>The main dashboard provides quick access to all banner functions:</p>
+
+    <h3>1. Create New Banner Options</h3>
+    <ul>
+      <li>New Slide Banner</li>
+      <li>New Sticky Banner</li>
+    </ul>
+
+    <h3>2. Banner List View</h3>
+    <p>View and manage all your created banners with the following features:</p>
+    <ul>
+      <li>Preview of all created banners</li>
+      <li>
+        Filter options:
+        <ul>
+          <li>By type (Slide/Sticky)</li>
+          <li>By status (Published/Unpublished)</li>
+        </ul>
+      </li>
+      <li>Search field for finding specific banners</li>
+    </ul>
+
+    <h3>3. Banner Actions</h3>
+    <p>Each banner in the list includes:</p>
+    <ul>
+      <li><strong>Published/Unpublished label</strong> - Indication of the publish status of the banner</li>
+      <li><strong>Preview images</strong> - View a preview of your banner or slides</li>
+      <li><strong>Edit button</strong> - Modify banner content and settings</li>
+      <li><strong>Duplicate button</strong> - Create a copy of the banner</li>
+      <li><strong>Delete button</strong> - Remove the banner</li>
+    </ul>
+
+    <h3>4. Expanded Preview</h3>
+    <p>Click to expand any banner preview to see:</p>
+    <ul>
+      <li>Detailed preview of each slide</li>
+      <li>Active status indicator</li>
+      <li>Scheduling information (start and end dates if applicable)</li>
+    </ul>
+
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> Use the search and filter features to quickly find specific banners, especially when managing multiple campaigns.</p>
+    </div>
+
+    <hr />
+
+    <div class="mt-12 flex gap-4">
+      <a href="/docs" class="btn bg-gray-200 text-gray-700 hover:bg-gray-300">
+        ← Previous: Getting Started
+      </a>
+      <a href="/docs/creating-banners" class="btn btn-primary">
+        Next: Creating Banners →
+      </a>
+    </div>
+  </div>
+</DocsLayout>

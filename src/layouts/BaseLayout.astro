@@ -1,0 +1,56 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Banners All Over - Enhance your Shopify store with stunning banners" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  
+  <body class="min-h-screen bg-white selection-bao">
+    <!-- Gradient background decoration -->
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+      <div class="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-gradient-radial from-bao-blue-50 via-transparent to-transparent opacity-30"></div>
+      <div class="absolute -bottom-1/2 -right-1/2 w-[200%] h-[200%] bg-gradient-radial from-bao-purple-50 via-transparent to-transparent opacity-30"></div>
+    </div>
+    
+    <!-- Main content -->
+    <slot />
+    
+    <!-- Optional: Add any global scripts here -->
+    <script>
+      // Add any global JavaScript here
+      console.log('Banners All Over - Loaded');
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  /* Any additional global styles that need to be in Astro scope */
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* Smooth scroll behavior */
+  html.smooth-scroll {
+    scroll-behavior: smooth;
+  }
+</style>

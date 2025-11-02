@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Section Preview</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for active feature */
+        .feature-card {
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #e5e7eb;
+            transform: translateX(8px);
+        }
+        
+        .feature-card.active {
+            border-color: #1386F2;
+            background: linear-gradient(90deg, rgba(19,134,242,0.05) 0%, rgba(181,7,162,0.05) 50%, rgba(255,36,0,0.05) 100%);
+            transform: translateX(8px);
+        }
+        
+        .feature-card.active::before {
+            content: '';
+            position: absolute;
+            left: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 60%;
+            background: linear-gradient(180deg, #1386F2 0%, #B507A2 50%, #FF2400 100%);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1023px) {
+            .feature-card:hover,
+            .feature-card.active {
+                transform: none;
+            }
+        }
+        
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+        
+        .container-bao {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+    </style>
+</head>
+<body>
+    <section id="features" class="section bg-gray-50">
+        <div class="container-bao">
+            <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+
+            <!-- Two column layout: features list on left, GIF display on right -->
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                
+                <!-- Left Column: Feature Cards -->
+                <div class="w-full lg:w-2/5 space-y-4">
+                    
+                    <!-- Smart Scheduling -->
+                    <div class="card feature-card group cursor-pointer transition-all duration-300"
+                         data-feature="0"
+                         data-gif="public/features_slider-schedule.gif">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-400 transition-colors">
+                                <svg class="w-6 h-6 text-blue-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-900">Smart Scheduling</h3>
+                                <p class="text-gray-600">Never miss a campaign deadline - schedule banners to show and hide automatically with precision by date and time.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Display Rules -->
+                    <div class="card feature-card group cursor-pointer transition-all duration-300"
+                         data-feature="1"
+                         data-gif="public/features_slider-rules.gif">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-400 transition-colors">
+                                <svg class="w-6 h-6 text-purple-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-900">Display Rules</h3>
+                                <p class="text-gray-600">Show your banners where they are relevant by applying rules based on tags, collections, vendors and more.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Positioning -->
+                    <div class="card feature-card group cursor-pointer transition-all duration-300"
+                         data-feature="2"
+                         data-gif="public/features_slider-target.gif">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-400 transition-colors">
+                                <svg class="w-6 h-6 text-red-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-900">Custom Positioning</h3>
+                                <p class="text-gray-600">Target your banner position wherever you want on the homepage, collections page, product pages, cart, or anywhere else in your e-commerce store.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced AI Editing -->
+                    <div class="card feature-card group cursor-pointer transition-all duration-300"
+                         data-feature="3"
+                         data-gif="public/features_slider-ai.gif">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-400 transition-colors">
+                                <svg class="w-6 h-6 text-gray-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2 text-gray-900">Advanced AI Editing</h3>
+                                <p class="text-gray-600">Fast and easy editing enhanced with powerful AI capabilities that take your banner creation to the next level.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: GIF Display -->
+                <div class="w-full lg:w-3/5">
+                    <div class="sticky top-24">
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                            <!-- GIF Container -->
+                            <div class="relative aspect-video bg-gray-50">
+                                <img id="feature-gif"
+                                     src="public/features_slider-schedule.gif"
+                                     alt="Feature demonstration"
+                                     class="w-full h-full object-cover transition-opacity duration-300" />
+                                <!-- Optional: Loading state -->
+                                <div id="gif-loading" class="absolute inset-0 flex items-center justify-center bg-gray-50 hidden">
+                                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+                                </div>
+                            </div>
+                            <!-- Feature Indicator -->
+                            <div class="h-1" style="background: linear-gradient(90deg, #1386F2 0%, #B507A2 50%, #FF2400 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const featureCards = document.querySelectorAll('.feature-card');
+            const gifImage = document.getElementById('feature-gif');
+            const gifLoading = document.getElementById('gif-loading');
+            let currentActive = 0;
+            let isLocked = false;
+            
+            // Function to update the displayed GIF
+            function updateGif(index) {
+                const card = featureCards[index];
+                const gifSrc = card.getAttribute('data-gif');
+                
+                // Update active states
+                featureCards.forEach((c, i) => {
+                    if (i === index) {
+                        c.classList.add('active');
+                    } else {
+                        c.classList.remove('active');
+                    }
+                });
+                
+                // Animate GIF change
+                if (gifImage && gifSrc) {
+                    // Show loading state briefly for smooth transition
+                    gifImage.style.opacity = '0.5';
+                    
+                    setTimeout(() => {
+                        gifImage.src = gifSrc;
+                        gifImage.style.opacity = '1';
+                    }, 150);
+                }
+                
+                currentActive = index;
+            }
+            
+            // Set initial active state
+            updateGif(0);
+            
+            // Add event listeners to each feature card
+            featureCards.forEach((card, index) => {
+                // Hover effect (desktop)
+                card.addEventListener('mouseenter', () => {
+                    if (!isLocked) {
+                        updateGif(index);
+                    }
+                });
+                
+                // Click to lock/unlock
+                card.addEventListener('click', () => {
+                    if (currentActive === index && isLocked) {
+                        // Unlock if clicking the same card
+                        isLocked = false;
+                    } else {
+                        // Lock to new selection
+                        updateGif(index);
+                        isLocked = true;
+                        
+                        // Auto-unlock after 10 seconds
+                        setTimeout(() => {
+                            isLocked = false;
+                        }, 10000);
+                    }
+                });
+            });
+            
+            // Reset to first feature when mouse leaves the entire section (only if not locked)
+            const featuresSection = document.getElementById('features');
+            if (featuresSection) {
+                featuresSection.addEventListener('mouseleave', () => {
+                    if (!isLocked) {
+                        // Optional: Reset to first feature
+                        // updateGif(0);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

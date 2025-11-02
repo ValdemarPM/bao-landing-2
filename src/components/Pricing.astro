@@ -1,0 +1,387 @@
+---
+// Pricing Component
+---
+
+<section id="pricing" class="section bg-gradient-to-b from-white to-gray-50">
+  <div class="container-bao">
+    <h2 class="text-4xl font-bold text-center mb-4">Simple, transparent pricing</h2>
+    <p class="text-xl text-gray-600 text-center mb-8">Choose the plan that fits your needs</p>
+
+    <!-- Pricing Toggle -->
+    <div class="flex justify-center items-center gap-4 mb-12">
+      <span class="text-lg font-medium" id="monthly-label">Monthly</span>
+      <button
+        id="pricing-toggle"
+        class="relative inline-flex h-8 w-16 items-center rounded-full bg-blue-500 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        role="switch"
+        aria-checked="true"
+        aria-labelledby="yearly-label"
+      >
+        <span
+          class="inline-block h-6 w-6 transform rounded-full bg-white shadow-lg transition-transform translate-x-9"
+          id="toggle-indicator"
+        ></span>
+      </button>
+      <span class="text-lg font-medium flex items-center gap-2" id="yearly-label">
+        Yearly
+        <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">Save 25%</span>
+      </span>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Basic Plan -->
+      <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2">Basic</h3>
+          <div class="text-4xl font-bold mb-2">
+            <span class="price-amount">Free</span>
+          </div>
+          <p class="text-gray-600">Perfect for getting started</p>
+        </div>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>2 banners</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>2 slides each</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>1 Sticky banner</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Image & Image + Text banners</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Default fonts (sans/serif)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Limited colors</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Show in Homepage</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Responsive design</span>
+          </li>
+        </ul>
+
+        <button class="w-full bg-gray-100 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors">
+          Get Started
+        </button>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="pricing-card bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-500 relative hover:shadow-2xl transition-shadow">
+        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+        </div>
+
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2">Standard</h3>
+          <div class="text-4xl font-bold mb-2">
+            <span class="price-amount" data-monthly="40" data-yearly="30">€30</span>
+            <span class="text-lg text-gray-600">/month</span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            <span class="yearly-price">€360 billed yearly</span>
+            <span class="monthly-price hidden">billed monthly</span>
+          </p>
+        </div>
+
+        <div class="text-sm font-semibold text-blue-600 mb-4">Everything in Basic, plus:</div>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>10 banners</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>5 slides each</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>5 Sticky banners</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Video & Product banners</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Duplicate banners & Slides</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Schedule by date</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Rules (collections/tags)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Auto slide & duration controls</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Buttons & navigation</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Custom fonts & colors</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Templates & Countdown widget</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Add to Cart button widget</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Show in Homepage, Product lists, Product pages & Cart</span>
+          </li>
+        </ul>
+
+        <button class="w-full bg-bao-gradient text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity">
+          Start Free Trial
+        </button>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-card bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+        <div class="text-center mb-6">
+          <h3 class="text-2xl font-bold mb-2">Pro</h3>
+          <div class="text-4xl font-bold mb-2">
+            <span class="price-amount" data-monthly="200" data-yearly="150">€150</span>
+            <span class="text-lg text-gray-600">/month</span>
+          </div>
+          <p class="text-gray-600 text-sm">
+            <span class="yearly-price">€1,800 billed yearly</span>
+            <span class="monthly-price hidden">billed monthly</span>
+          </p>
+        </div>
+
+        <div class="text-sm font-semibold text-blue-600 mb-4">Everything in Standard, plus:</div>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>30 banners</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>8 slides each</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>20 Sticky banners</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Show in 404, Account, Custom pages</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Advanced rules (Brand/Product types)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Smart conditions (Price, Basket value, Discounts)</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Basket product combinations</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Transition animations</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Subscribe form widget</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Internal analytics dashboard</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>A/B Tests</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>AI text generator</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>AI image generator (150 images)</strong></span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span><strong>AI auto responsive (150 images)</strong></span>
+          </li>
+        </ul>
+
+        <button class="w-full bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Pricing toggle functionality
+  const toggle = document.getElementById('pricing-toggle');
+  const toggleIndicator = document.getElementById('toggle-indicator');
+  const monthlyLabels = document.querySelectorAll('.monthly-price');
+  const yearlyLabels = document.querySelectorAll('.yearly-price');
+  const priceAmounts = document.querySelectorAll('.price-amount');
+
+  let isYearly = true; // Default to yearly
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      isYearly = !isYearly;
+
+      // Update toggle appearance
+      toggle.setAttribute('aria-checked', isYearly.toString());
+
+      if (isYearly) {
+        toggle.classList.remove('bg-gray-300');
+        toggle.classList.add('bg-blue-500');
+        toggleIndicator?.classList.remove('translate-x-1');
+        toggleIndicator?.classList.add('translate-x-9');
+      } else {
+        toggle.classList.remove('bg-blue-500');
+        toggle.classList.add('bg-gray-300');
+        toggleIndicator?.classList.remove('translate-x-9');
+        toggleIndicator?.classList.add('translate-x-1');
+      }
+
+      // Update price displays
+      priceAmounts.forEach((amount) => {
+        const monthlyPrice = amount.getAttribute('data-monthly');
+        const yearlyPrice = amount.getAttribute('data-yearly');
+
+        if (monthlyPrice && yearlyPrice) {
+          amount.textContent = isYearly ? `€${yearlyPrice}` : `€${monthlyPrice}`;
+        }
+      });
+
+      // Toggle billing period text
+      monthlyLabels.forEach((label) => {
+        if (isYearly) {
+          label.classList.add('hidden');
+        } else {
+          label.classList.remove('hidden');
+        }
+      });
+
+      yearlyLabels.forEach((label) => {
+        if (isYearly) {
+          label.classList.remove('hidden');
+        } else {
+          label.classList.add('hidden');
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .pricing-card {
+    transition: transform 0.3s ease;
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-4px);
+  }
+
+  #toggle-indicator {
+    transition: transform 0.3s ease;
+  }
+</style>
