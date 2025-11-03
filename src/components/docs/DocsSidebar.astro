@@ -1,17 +1,18 @@
 ---
 // Docs Sidebar Navigation
 const currentPath = Astro.url.pathname;
+const baseUrl = import.meta.env.BASE_URL;
 
 const navItems = [
-  { title: 'Getting Started', href: '/docs', icon: '🚀' },
-  { title: 'Main Dashboard', href: '/docs/dashboard', icon: '📊' },
-  { title: 'Creating Banners', href: '/docs/creating-banners', icon: '✏️' },
-  { title: 'Slide Types', href: '/docs/slide-types', icon: '🎨' },
-  { title: 'Banner Settings', href: '/docs/settings', icon: '⚙️' },
-  { title: 'Banner Placement', href: '/docs/placement', icon: '📍' },
-  { title: 'Advanced Features', href: '/docs/advanced-features', icon: '⚡' },
-  { title: 'Account Management', href: '/docs/account-management', icon: '👤' },
-  { title: 'Support & Feedback', href: '/docs/support-feedback', icon: '💬' },
+  { title: 'Getting Started', href: `${baseUrl}/docs`, icon: '🚀' },
+  { title: 'Main Dashboard', href: `${baseUrl}/docs/dashboard`, icon: '📊' },
+  { title: 'Creating Banners', href: `${baseUrl}/docs/creating-banners`, icon: '✏️' },
+  { title: 'Slide Types', href: `${baseUrl}/docs/slide-types`, icon: '🎨' },
+  { title: 'Banner Settings', href: `${baseUrl}/docs/settings`, icon: '⚙️' },
+  { title: 'Banner Placement', href: `${baseUrl}/docs/placement`, icon: '📍' },
+  { title: 'Advanced Features', href: `${baseUrl}/docs/advanced-features`, icon: '⚡' },
+  { title: 'Account Management', href: `${baseUrl}/docs/account-management`, icon: '👤' },
+  { title: 'Support & Feedback', href: `${baseUrl}/docs/support-feedback`, icon: '💬' },
 ];
 ---
 
@@ -38,7 +39,7 @@ const navItems = [
 
     <ul class="space-y-1">
       {navItems.map((item) => {
-        const isActive = currentPath === item.href || (item.href === '/docs' && currentPath === '/docs/');
+        const isActive = currentPath === item.href || currentPath === item.href + '/' || (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'));
         return (
           <li>
             <a
@@ -65,17 +66,17 @@ const navItems = [
       <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Links</h3>
       <ul class="space-y-2">
         <li>
-          <a href="/#features" class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
+          <a href={`${baseUrl}/#features`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
             View Features
           </a>
         </li>
         <li>
-          <a href="/#pricing" class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
+          <a href={`${baseUrl}/#pricing`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
             See Pricing
           </a>
         </li>
         <li>
-          <a href="/#support" class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
+          <a href={`${baseUrl}/#support`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
             Get Support
           </a>
         </li>
