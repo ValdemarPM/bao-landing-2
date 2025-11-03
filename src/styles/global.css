@@ -3,6 +3,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brother1816 Font Family Definitions */
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Book.ttf') format('truetype');
+  font-weight: 350;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Brother1816';
+  src: url('/bao-landing-2/fonts/Brother1816-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 /* Custom Base Styles */
 @layer base {
   :root {
