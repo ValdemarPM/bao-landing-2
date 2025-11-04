@@ -1,36 +1,160 @@
 ---
 // Docs Sidebar Navigation
 const currentPath = Astro.url.pathname;
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = (import.meta as any).env.BASE_URL;
 
 const navItems = [
-  { title: 'Getting Started', href: `${baseUrl}/docs`, icon: '🚀' },
-  { title: 'Main Dashboard', href: `${baseUrl}/docs/dashboard`, icon: '📊' },
-  { title: 'Creating Banners', href: `${baseUrl}/docs/creating-banners`, icon: '✏️' },
-  { title: 'Slide Types', href: `${baseUrl}/docs/slide-types`, icon: '🎨' },
-  { title: 'Banner Settings', href: `${baseUrl}/docs/settings`, icon: '⚙️' },
-  { title: 'Banner Placement', href: `${baseUrl}/docs/placement`, icon: '📍' },
-  { title: 'Advanced Features', href: `${baseUrl}/docs/advanced-features`, icon: '⚡' },
-  { title: 'Account Management', href: `${baseUrl}/docs/account-management`, icon: '👤' },
-  { title: 'Support & Feedback', href: `${baseUrl}/docs/support-feedback`, icon: '💬' },
+  {
+    title: 'Getting Started',
+    href: `${baseUrl}/docs`,
+    icon: `${baseUrl}/icons/getting-started.svg`,
+  },
+  {
+    title: 'Main Dashboard',
+    href: `${baseUrl}/docs/dashboard`,
+    icon: `${baseUrl}/icons/main-dashboard.svg`,
+  },
+  {
+    title: 'Creating Banners',
+    href: `${baseUrl}/docs/creating-banners`,
+    icon: `${baseUrl}/icons/creating-banners.svg`,
+  },
+  {
+    title: 'Slide Types',
+    href: `${baseUrl}/docs/slide-types`,
+    icon: `${baseUrl}/icons/slide-types.svg`,
+  },
+  {
+    title: 'Banner Settings',
+    href: `${baseUrl}/docs/settings`,
+    icon: `${baseUrl}/icons/banner-settings.svg`,
+  },
+  {
+    title: 'Banner Placement',
+    href: `${baseUrl}/docs/placement`,
+    icon: `${baseUrl}/icons/banner-placement.svg`,
+  },
+  {
+    title: 'Advanced Features',
+    href: `${baseUrl}/docs/advanced-features`,
+    icon: `${baseUrl}/icons/advanced-features.svg`,
+  },
+  {
+    title: 'Account Management',
+    href: `${baseUrl}/docs/account-management`,
+    icon: `${baseUrl}/icons/account.svg`,
+  },
+  {
+    title: 'Support & Feedback',
+    href: `${baseUrl}/docs/support-feedback`,
+    icon: `${baseUrl}/icons/support.svg`,
+  },
 ];
 ---
 
-<!-- Mobile Toggle Button -->
-<button
-  id="docs-sidebar-toggle"
-  class="fixed bottom-6 right-6 z-50 lg:hidden bg-bao-blue-400 text-white p-4 rounded-full shadow-lg hover:bg-bao-blue-500 transition-all"
-  aria-label="Toggle documentation menu"
->
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-  </svg>
-</button>
+<!-- Mobile Inline Accordion (only visible on mobile) -->
+<div class="lg:hidden bg-white border border-gray-200 rounded-lg mb-6 overflow-hidden">
+  <button
+    id="docs-accordion-toggle"
+    class="w-full flex items-center justify-between px-5 py-5 hover:bg-gray-50 transition-colors text-left"
+    aria-label="Toggle documentation navigation"
+    aria-expanded="false"
+  >
+    <div class="flex items-center gap-4 flex-1 min-w-0">
+      <img
+        id="current-page-icon-mobile"
+        src={navItems.find(item =>
+          currentPath === item.href ||
+          currentPath === item.href + '/' ||
+          (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'))
+        )?.icon || navItems[0].icon}
+        alt=""
+        class="w-7 h-7 flex-shrink-0 doc-icon doc-icon-active"
+      />
+      <div class="flex flex-col items-start min-w-0">
+        <span class="text-sm text-gray-500 font-medium">Documentation</span>
+        <span class="text-lg font-semibold text-gray-900 truncate">
+          {navItems.find(item =>
+            currentPath === item.href ||
+            currentPath === item.href + '/' ||
+            (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'))
+          )?.title || 'Getting Started'}
+        </span>
+      </div>
+    </div>
+    <svg
+      id="accordion-chevron"
+      class="w-6 h-6 text-gray-400 transition-transform duration-200 flex-shrink-0 ml-2"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
 
-<!-- Sidebar -->
+  <!-- Accordion Content -->
+  <div id="docs-accordion-content" class="hidden border-t border-gray-200">
+    <nav class="p-4">
+      <ul class="space-y-1">
+        {navItems.map((item) => {
+          const isActive = currentPath === item.href || currentPath === item.href + '/' || (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'));
+          return (
+            <li>
+              <a
+                href={item.href}
+                class={`flex items-center gap-4 px-4 py-3.5 rounded-lg transition-all duration-200 ${
+                  isActive
+                    ? 'bg-gradient-to-r from-bao-blue-50 to-bao-purple-50 text-bao-blue-500 font-semibold'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
+                }`}
+              >
+                <img
+                  src={item.icon}
+                  alt=""
+                  class={`w-7 h-7 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
+                />
+                <span class="flex-1 text-lg">{item.title}</span>
+                {isActive && <span class="w-2 h-2 rounded-full bg-bao-blue-400"></span>}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+
+      <!-- Quick Links in Accordion -->
+      <div class="mt-5 pt-4 border-t border-gray-200">
+        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Links</h3>
+        <ul class="space-y-2.5">
+          <li>
+            <a href={`${baseUrl}/#features`} class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block">
+              View Features
+            </a>
+          </li>
+          <li>
+            <a href={`${baseUrl}/#pricing`} class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block">
+              See Pricing
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://apps.shopify.com/banners-all-over"
+              target="_blank"
+              class="text-lg text-gray-600 hover:text-bao-red-300 transition-colors block"
+            >
+              Intall the App ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- Desktop Sidebar (only visible on desktop) -->
 <aside
   id="docs-sidebar"
-  class="fixed lg:sticky top-[112px] left-0 h-[calc(100vh-112px)] w-72 bg-white border-r border-gray-200 overflow-y-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-300 z-40"
+  class="hidden lg:block sticky top-[112px] h-[calc(100vh-112px)] w-72 bg-white border-r border-gray-200 overflow-y-auto z-40"
 >
   <nav class="p-6">
     <div class="mb-6">
@@ -50,7 +174,11 @@ const navItems = [
                   : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
               }`}
             >
-              <span class="text-xl">{item.icon}</span>
+              <img
+                src={item.icon}
+                alt=""
+                class={`w-5 h-5 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
+              />
               <span class="flex-1">{item.title}</span>
               {isActive && (
                 <span class="w-1.5 h-1.5 rounded-full bg-bao-blue-400"></span>
@@ -76,8 +204,12 @@ const navItems = [
           </a>
         </li>
         <li>
-          <a href={`${baseUrl}/#support`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
-            Get Support
+          <a
+            href="https://apps.shopify.com/banners-all-over"
+            target="_blank"
+            class="text-sm text-gray-600 hover:text-bao-red-300 transition-colors"
+          >
+            Intall the App ↗
           </a>
         </li>
       </ul>
@@ -85,32 +217,36 @@ const navItems = [
   </nav>
 </aside>
 
-<!-- Overlay for mobile -->
-<div
-  id="docs-sidebar-overlay"
-  class="fixed inset-0 bg-black/50 z-30 lg:hidden hidden"
-></div>
-
 <script>
-  // Mobile sidebar toggle
-  const toggle = document.getElementById('docs-sidebar-toggle');
-  const sidebar = document.getElementById('docs-sidebar');
-  const overlay = document.getElementById('docs-sidebar-overlay');
+  // Mobile accordion toggle
+  const accordionToggle = document.getElementById('docs-accordion-toggle');
+  const accordionContent = document.getElementById('docs-accordion-content');
+  const accordionChevron = document.getElementById('accordion-chevron');
 
-  function toggleSidebar() {
-    sidebar?.classList.toggle('-translate-x-full');
-    overlay?.classList.toggle('hidden');
+  function toggleAccordion() {
+    const isHidden = accordionContent?.classList.contains('hidden');
+
+    if (isHidden) {
+      accordionContent?.classList.remove('hidden');
+      accordionChevron?.classList.add('rotate-180');
+      accordionToggle?.setAttribute('aria-expanded', 'true');
+    } else {
+      accordionContent?.classList.add('hidden');
+      accordionChevron?.classList.remove('rotate-180');
+      accordionToggle?.setAttribute('aria-expanded', 'false');
+    }
   }
 
-  toggle?.addEventListener('click', toggleSidebar);
-  overlay?.addEventListener('click', toggleSidebar);
+  accordionToggle?.addEventListener('click', toggleAccordion);
 
-  // Close sidebar when clicking on a link (mobile)
-  const sidebarLinks = sidebar?.querySelectorAll('a');
-  sidebarLinks?.forEach(link => {
+  // Optional: Close accordion when clicking on a link (if you want this behavior)
+  const accordionLinks = accordionContent?.querySelectorAll('a');
+  accordionLinks?.forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth < 1024) {
-        toggleSidebar();
+        accordionContent?.classList.add('hidden');
+        accordionChevron?.classList.remove('rotate-180');
+        accordionToggle?.setAttribute('aria-expanded', 'false');
       }
     });
   });
@@ -138,5 +274,22 @@ const navItems = [
 
   #docs-sidebar::-webkit-scrollbar-thumb:hover {
     background-color: #94a3b8;
+  }
+
+  /* Icon color styling */
+  .doc-icon {
+    filter: brightness(0) saturate(100%) invert(44%) sepia(10%) saturate(419%) hue-rotate(180deg)
+      brightness(95%) contrast(90%);
+    transition: filter 0.2s ease;
+  }
+
+  a:hover .doc-icon {
+    filter: brightness(0) saturate(100%) invert(46%) sepia(95%) saturate(1234%) hue-rotate(188deg)
+      brightness(99%) contrast(101%);
+  }
+
+  .doc-icon-active {
+    filter: brightness(0) saturate(100%) invert(46%) sepia(95%) saturate(1234%) hue-rotate(188deg)
+      brightness(99%) contrast(101%);
   }
 </style>
