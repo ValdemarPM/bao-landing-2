@@ -1,5 +1,11 @@
 ---
 // Header component for Banners All Over
+
+// Detect current route for context-aware navigation
+const currentPath = Astro.url.pathname;
+const isDocsPage = currentPath.includes('/docs');
+const baseUrl = import.meta.env.BASE_URL;
+const navPrefix = isDocsPage ? baseUrl : '';
 ---
 
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -25,7 +31,7 @@
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
         <a
-          href="#features"
+          href={`${navPrefix}#features`}
           class="nav-link group relative px-3 py-2 text-gray-600 hover:text-bao-blue-400 font-medium transition-all duration-300 hover:scale-105"
         >
           <span class="relative z-10">Features</span>
@@ -37,7 +43,7 @@
           ></span>
         </a>
         <a
-          href="#how-it-works"
+          href={`${navPrefix}#how-it-works`}
           class="nav-link group relative px-3 py-2 text-gray-600 hover:text-bao-purple-300 font-medium transition-all duration-300 hover:scale-105"
         >
           <span class="relative z-10">How it works</span>
@@ -49,7 +55,7 @@
           ></span>
         </a>
         <a
-          href="#pricing"
+          href={`${navPrefix}#pricing`}
           class="nav-link group relative px-3 py-2 text-gray-600 hover:text-bao-blue-400 font-medium transition-all duration-300 hover:scale-105"
         >
           <span class="relative z-10">Pricing</span>
@@ -61,7 +67,7 @@
           ></span>
         </a>
         <a
-          href="#support"
+          href={`${navPrefix}#support`}
           class="nav-link group relative px-3 py-2 text-gray-600 hover:text-bao-red-300 font-medium transition-all duration-300 hover:scale-105"
         >
           <span class="relative z-10">Support</span>
@@ -73,8 +79,7 @@
           ></span>
         </a>
         <a
-          href="https://valdemarpm.github.io/bao-landing-2/docs"
-          rel="noopener noreferrer"
+          href={`${import.meta.env.BASE_URL}/docs`}
           class="nav-link group relative px-3 py-2 text-gray-600 hover:text-bao-purple-300 font-medium transition-all duration-300 hover:scale-105"
         >
           <span class="relative z-10">Documentation</span>
@@ -114,32 +119,31 @@
     <div class="hidden md:hidden py-4 border-t border-gray-100" id="mobile-menu">
       <div class="flex flex-col space-y-4">
         <a
-          href="#features"
+          href={`${navPrefix}#features`}
           class="text-gray-600 hover:text-bao-blue-400 font-medium transition-colors"
         >
           Features
         </a>
         <a
-          href="#how-it-works"
+          href={`${navPrefix}#how-it-works`}
           class="text-gray-600 hover:text-bao-purple-300 font-medium transition-colors"
         >
           How it works
         </a>
         <a
-          href="#pricing"
+          href={`${navPrefix}#pricing`}
           class="text-gray-600 hover:text-bao-blue-400 font-medium transition-colors"
         >
           Pricing
         </a>
         <a
-          href="#support"
+          href={`${navPrefix}#support`}
           class="text-gray-600 hover:text-bao-red-300 font-medium transition-colors"
         >
           Support
         </a>
         <a
-          href="https://valdemarpm.github.io/bao-landing-2/docs"
-          rel="noopener noreferrer"
+          href={`${import.meta.env.BASE_URL}/docs`}
           class="text-gray-600 hover:text-bao-purple-300 font-medium transition-colors"
         >
           Documentation
@@ -164,14 +168,14 @@
   // Smooth scroll to sections
   document.addEventListener('DOMContentLoaded', () => {
     // Get all navigation links (both desktop and mobile)
-    const navLinks = document.querySelectorAll('.nav-link, #mobile-menu a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"], #mobile-menu a[href^="#"]');
 
     navLinks.forEach((link) => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
 
         const targetId = link.getAttribute('href');
-        if (!targetId || targetId === '#') return;
+        if (!targetId || targetId === '#' || !targetId.startsWith('#')) return;
 
         const targetSection = document.querySelector(targetId) as HTMLElement;
 
