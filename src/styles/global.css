@@ -77,10 +77,19 @@
     --gradient-start: #074279;
     --gradient-middle: #B507A2;
     --gradient-end: #FF2400;
+
+    /* Line-height design tokens */
+    --line-height-tighter: 1;
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
   }
 
   html {
     scroll-behavior: smooth;
+    line-height: var(--line-height-normal);
   }
 
   body {
@@ -94,11 +103,21 @@
   h5,
   h6 {
     @apply font-bold;
+    line-height: var(--line-height-tight);
+  }
+
+  p {
+    line-height: var(--line-height-relaxed);
   }
 }
 
 /* Custom Component Classes */
 @layer components {
+
+  /* Navigation Links */
+  .nav-link {
+    line-height: var(--line-height-tighter);
+  }
 
   /* Button Components */
   .btn {

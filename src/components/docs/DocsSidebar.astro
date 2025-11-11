@@ -63,10 +63,12 @@ const navItems = [
     <div class="flex items-center gap-4 flex-1 min-w-0">
       <img
         id="current-page-icon-mobile"
-        src={navItems.find(item =>
-          currentPath === item.href ||
-          currentPath === item.href + '/' ||
-          (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'))
+        src={navItems.find(
+          (item) =>
+            currentPath === item.href ||
+            currentPath === item.href + '/' ||
+            (item.href.endsWith('/docs') &&
+              (currentPath === item.href || currentPath === item.href + '/'))
         )?.icon || navItems[0].icon}
         alt=""
         class="w-7 h-7 flex-shrink-0 doc-icon doc-icon-active"
@@ -74,11 +76,15 @@ const navItems = [
       <div class="flex flex-col items-start min-w-0">
         <span class="text-sm text-gray-500 font-medium">Documentation</span>
         <span class="text-lg font-semibold text-gray-900 truncate">
-          {navItems.find(item =>
-            currentPath === item.href ||
-            currentPath === item.href + '/' ||
-            (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'))
-          )?.title || 'Getting Started'}
+          {
+            navItems.find(
+              (item) =>
+                currentPath === item.href ||
+                currentPath === item.href + '/' ||
+                (item.href.endsWith('/docs') &&
+                  (currentPath === item.href || currentPath === item.href + '/'))
+            )?.title || 'Getting Started'
+          }
         </span>
       </div>
     </div>
@@ -89,7 +95,8 @@ const navItems = [
       stroke="currentColor"
       viewBox="0 0 24 24"
     >
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+      ></path>
     </svg>
   </button>
 
@@ -97,42 +104,56 @@ const navItems = [
   <div id="docs-accordion-content" class="hidden border-t border-gray-200">
     <nav class="p-4">
       <ul class="space-y-1">
-        {navItems.map((item) => {
-          const isActive = currentPath === item.href || currentPath === item.href + '/' || (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'));
-          return (
-            <li>
-              <a
-                href={item.href}
-                class={`flex items-center gap-4 px-4 py-3.5 rounded-lg transition-all duration-200 ${
-                  isActive
-                    ? 'bg-gradient-to-r from-bao-blue-50 to-bao-purple-50 text-bao-blue-500 font-semibold'
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
-                }`}
-              >
-                <img
-                  src={item.icon}
-                  alt=""
-                  class={`w-7 h-7 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
-                />
-                <span class="flex-1 text-lg">{item.title}</span>
-                {isActive && <span class="w-2 h-2 rounded-full bg-bao-blue-400"></span>}
-              </a>
-            </li>
-          );
-        })}
+        {
+          navItems.map((item) => {
+            const isActive =
+              currentPath === item.href ||
+              currentPath === item.href + '/' ||
+              (item.href.endsWith('/docs') &&
+                (currentPath === item.href || currentPath === item.href + '/'));
+            return (
+              <li>
+                <a
+                  href={item.href}
+                  class={`flex items-center gap-4 px-4 py-3.5 rounded-lg transition-all duration-200 ${
+                    isActive
+                      ? 'bg-gradient-to-r from-bao-blue-50 to-bao-purple-50 text-bao-blue-500 font-semibold'
+                      : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
+                  }`}
+                >
+                  <img
+                    src={item.icon}
+                    alt=""
+                    class={`w-7 h-7 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
+                  />
+                  <span class="flex-1 text-lg">{item.title}</span>
+                  {isActive && <span class="w-2 h-2 rounded-full bg-bao-blue-400" />}
+                </a>
+              </li>
+            );
+          })
+        }
       </ul>
 
       <!-- Quick Links in Accordion -->
       <div class="mt-5 pt-4 border-t border-gray-200">
-        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Links</h3>
+        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+          Quick Links
+        </h3>
         <ul class="space-y-2.5">
           <li>
-            <a href={`${baseUrl}/#features`} class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block">
+            <a
+              href={`${baseUrl}/#features`}
+              class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block"
+            >
               View Features
             </a>
           </li>
           <li>
-            <a href={`${baseUrl}/#pricing`} class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block">
+            <a
+              href={`${baseUrl}/#pricing`}
+              class="text-lg text-gray-600 hover:text-bao-blue-400 transition-colors block"
+            >
               See Pricing
             </a>
           </li>
@@ -142,7 +163,7 @@ const navItems = [
               target="_blank"
               class="text-lg text-gray-600 hover:text-bao-red-300 transition-colors block"
             >
-              Intall the App ↗
+              Install the App ↗
             </a>
           </li>
         </ul>
@@ -158,35 +179,41 @@ const navItems = [
 >
   <nav class="p-6">
     <div class="mb-6">
-      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Documentation</h2>
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+        Documentation
+      </h2>
     </div>
 
     <ul class="space-y-1">
-      {navItems.map((item) => {
-        const isActive = currentPath === item.href || currentPath === item.href + '/' || (item.href.endsWith('/docs') && (currentPath === item.href || currentPath === item.href + '/'));
-        return (
-          <li>
-            <a
-              href={item.href}
-              class={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group ${
-                isActive
-                  ? 'bg-gradient-to-r from-bao-blue-50 to-bao-purple-50 text-bao-blue-500 font-semibold'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
-              }`}
-            >
-              <img
-                src={item.icon}
-                alt=""
-                class={`w-5 h-5 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
-              />
-              <span class="flex-1">{item.title}</span>
-              {isActive && (
-                <span class="w-1.5 h-1.5 rounded-full bg-bao-blue-400"></span>
-              )}
-            </a>
-          </li>
-        );
-      })}
+      {
+        navItems.map((item) => {
+          const isActive =
+            currentPath === item.href ||
+            currentPath === item.href + '/' ||
+            (item.href.endsWith('/docs') &&
+              (currentPath === item.href || currentPath === item.href + '/'));
+          return (
+            <li>
+              <a
+                href={item.href}
+                class={`flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 group ${
+                  isActive
+                    ? 'bg-gradient-to-r from-bao-blue-50 to-bao-purple-50 text-bao-blue-500 font-semibold'
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-bao-blue-400'
+                }`}
+              >
+                <img
+                  src={item.icon}
+                  alt=""
+                  class={`w-5 h-5 doc-icon ${isActive ? 'doc-icon-active' : ''}`}
+                />
+                <span class="flex-1">{item.title}</span>
+                {isActive && <span class="w-1.5 h-1.5 rounded-full bg-bao-blue-400" />}
+              </a>
+            </li>
+          );
+        })
+      }
     </ul>
 
     <!-- Quick Links -->
@@ -194,12 +221,18 @@ const navItems = [
       <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Links</h3>
       <ul class="space-y-2">
         <li>
-          <a href={`${baseUrl}/#features`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
+          <a
+            href={`${baseUrl}/#features`}
+            class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors"
+          >
             View Features
           </a>
         </li>
         <li>
-          <a href={`${baseUrl}/#pricing`} class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors">
+          <a
+            href={`${baseUrl}/#pricing`}
+            class="text-sm text-gray-600 hover:text-bao-blue-400 transition-colors"
+          >
             See Pricing
           </a>
         </li>
@@ -209,7 +242,7 @@ const navItems = [
             target="_blank"
             class="text-sm text-gray-600 hover:text-bao-red-300 transition-colors"
           >
-            Intall the App ↗
+            Install the App ↗
           </a>
         </li>
       </ul>
@@ -241,7 +274,7 @@ const navItems = [
 
   // Optional: Close accordion when clicking on a link (if you want this behavior)
   const accordionLinks = accordionContent?.querySelectorAll('a');
-  accordionLinks?.forEach(link => {
+  accordionLinks?.forEach((link) => {
     link.addEventListener('click', () => {
       if (window.innerWidth < 1024) {
         accordionContent?.classList.add('hidden');

@@ -57,6 +57,13 @@ module.exports = {
       fontFamily: {
         sans: ['Brother1816', 'system-ui', 'sans-serif'],
       },
+      lineHeight: {
+        'tight': '1.2',
+        'snug': '1.375',
+        'normal': '1.5',
+        'relaxed': '1.625',
+        'loose': '2',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
