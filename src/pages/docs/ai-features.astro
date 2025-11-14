@@ -1,0 +1,182 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="AI Features">
+  <div class="docs-content">
+    <h1 class="flex items-end justify-between gap-4">
+      <span>AI Features</span>
+      <img
+        src={`${import.meta.env.BASE_URL}/coming-soon_badge.svg`}
+        alt="Coming Soon"
+        class="w-32 h-auto"
+      />
+      <!-- class="w-32 h-auto mb-[-46px]" -->
+    </h1>
+
+    <p>
+      Banners All Over includes powerful AI-driven features to help you create stunning banners with minimal effort.
+      Our AI tools assist with image optimization, background manipulation, text enhancement, and content generation.
+    </p>
+
+    <h2>Responsive Version Generation</h2>
+    <p>
+      Save time by letting AI automatically create responsive versions of your images. Upload a single image,
+      and our AI will generate three optimized versions for different screen sizes.
+    </p>
+    <h3>How It Works</h3>
+    <ul>
+      <li>Upload one high-quality image</li>
+      <li>AI automatically analyzes the composition and focal points</li>
+      <li>Generates three versions: desktop, tablet, and mobile</li>
+      <li>Each version is optimized for its target screen size</li>
+    </ul>
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> For best results, use high-resolution images with clear focal points. The AI will intelligently crop and resize while maintaining the most important elements.</p>
+    </div>
+
+    <hr />
+
+    <h2>Background Removal, Replace & Color</h2>
+    <p>
+      Transform your images with AI-powered background manipulation tools. Whether you need to remove,
+      replace, or change the color of backgrounds, our AI makes it simple.
+    </p>
+    <h3>Available Options</h3>
+    <ul>
+      <li><strong>Background Removal:</strong> Automatically detect and remove backgrounds with precision</li>
+      <li><strong>Background Replace:</strong> Replace backgrounds with new images or scenes</li>
+      <li><strong>Background Color:</strong> Change background to any solid color or gradient</li>
+    </ul>
+    <h3>Usage Steps</h3>
+    <ol>
+      <li>Upload your image to a slide</li>
+      <li>Select the background manipulation option</li>
+      <li>For removal: AI automatically processes the image</li>
+      <li>For replace: Choose a new background image or scene</li>
+      <li>For color: Select your desired color from the picker</li>
+    </ol>
+
+    <hr />
+
+    <h2>Product Banner Enhancement</h2>
+    <p>
+      Perfect for e-commerce and product showcases. When your product image doesn't quite fit your banner's
+      aesthetic, use AI to adjust the background while keeping the product pristine.
+    </p>
+    <h3>Features</h3>
+    <ul>
+      <li>Isolate product from original background</li>
+      <li>Remove distracting backgrounds</li>
+      <li>Replace with brand-consistent backgrounds</li>
+      <li>Apply solid colors that match your design</li>
+    </ul>
+    <div class="docs-note">
+      <p><strong>Note:</strong> The AI is trained to recognize common product types and will preserve fine details like hair, fur, or transparent objects.</p>
+    </div>
+
+    <hr />
+
+    <h2>Image Improvement</h2>
+    <p>
+      Give natural language instructions to enhance your images. Our AI understands your requests and
+      applies professional-grade improvements.
+    </p>
+    <h3>Example Instructions</h3>
+    <ul>
+      <li>"Make it brighter and more vibrant"</li>
+      <li>"Add a soft blur to the background"</li>
+      <li>"Enhance the colors and increase contrast"</li>
+      <li>"Make it look more professional"</li>
+      <li>"Adjust the lighting to be warmer"</li>
+    </ul>
+    <div class="docs-info">
+      <h4>How to Use Image Improvement</h4>
+      <p>
+        Simply type your enhancement request in plain English. The AI will interpret your instructions
+        and apply appropriate adjustments to brightness, contrast, saturation, sharpness, and other
+        image properties.
+      </p>
+    </div>
+
+    <hr />
+
+    <h2>Text Enhancement</h2>
+    <p>
+      Improve your banner copy with AI-powered text enhancement. Transform basic text into compelling,
+      professional messaging that drives engagement.
+    </p>
+    <h3>Enhancement Options</h3>
+    <ul>
+      <li><strong>Refine:</strong> Polish grammar, spelling, and clarity</li>
+      <li><strong>Shorten:</strong> Make text more concise while preserving meaning</li>
+      <li><strong>Expand:</strong> Add detail and context to brief messages</li>
+      <li><strong>Rephrase:</strong> Rewrite in different tone or style</li>
+      <li><strong>Make Catchy:</strong> Transform into attention-grabbing copy</li>
+    </ul>
+    <h3>How to Use</h3>
+    <ol>
+      <li>Add text to your slide</li>
+      <li>Click the text enhancement button</li>
+      <li>Choose your enhancement type or provide custom instructions</li>
+      <li>Review and apply the AI suggestions</li>
+    </ol>
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> Be specific with your enhancement requests. For example, "Make this more exciting for a young audience" will yield better results than just "improve this."</p>
+    </div>
+
+    <hr />
+
+    <h2>Image Generation</h2>
+    <p>
+      Create custom images from text prompts using advanced AI image generation. Perfect when you need
+      unique visuals that don't exist in stock libraries.
+    </p>
+    <h3>Creating Images with AI</h3>
+    <ol>
+      <li>Open the image generation tool in your slide editor</li>
+      <li>Write a detailed description of the image you want</li>
+      <li>Specify style preferences (realistic, illustration, abstract, etc.)</li>
+      <li>Generate and review options</li>
+      <li>Select and add to your banner</li>
+    </ol>
+    <h3>Prompt Tips</h3>
+    <ul>
+      <li>Be specific about subjects, colors, and composition</li>
+      <li>Mention the desired style or mood</li>
+      <li>Include lighting and perspective details</li>
+      <li>Reference artistic styles if relevant (e.g., "watercolor," "minimalist")</li>
+    </ul>
+    <h3>Example Prompts</h3>
+    <ul>
+      <li>"A modern office workspace with laptop, coffee, and natural lighting, minimalist style"</li>
+      <li>"Abstract geometric shapes in blue and purple gradient, clean background"</li>
+      <li>"Happy diverse team celebrating success, bright office environment, professional photography"</li>
+      <li>"Tropical beach sunset with palm trees, vibrant colors, wide angle"</li>
+    </ul>
+    <div class="docs-note">
+      <p><strong>Note:</strong> Generated images are unique and royalty-free for use in your banners. More detailed prompts generally produce better results.</p>
+    </div>
+
+    <hr />
+
+    <div class="docs-info">
+      <h4>AI Feature Availability</h4>
+      <p>
+        AI features are available on Premium and Enterprise plans. Each feature has usage limits based
+        on your subscription tier. Check your dashboard for current usage and limits.
+      </p>
+    </div>
+
+    <hr />
+
+    <div class="mt-12 flex gap-4">
+      <a href={`${import.meta.env.BASE_URL}/docs/advanced-features`} class="btn bg-gray-200 text-gray-700 hover:bg-gray-300">
+        ← Previous: Advanced Features
+      </a>
+      <a href={`${import.meta.env.BASE_URL}/docs/account-management`} class="btn btn-primary">
+        Next: Account Management →
+      </a>
+    </div>
+  </div>
+</DocsLayout>

@@ -1,0 +1,115 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout title="Banner Rules">
+  <div class="docs-content">
+    <h1>Banner Rules</h1>
+
+    <p>Banner rules allow you to control when your banners appear based on product classification.<br /></p>
+
+    <div class="docs-info">
+      <p><strong>Set Display Rules</strong> - Create targeted campaigns that show relevant content related to specific product categories, collections, or customer segments.</p>
+    </div>
+     
+
+    <h2>Available Rule Types</h2>
+    <p>Configure conditions for banner visibility based on the following conditions:</p>
+    <ul>
+      <li>
+        <strong>Tags:</strong> Show the banner if the products follow these specified tag rules:
+        <ul>
+          <li>All products must have the specified tags</li>
+          <li>At least one product must have the specified tags</li>
+          <li>None of the products have the specified tags</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Brands/Vendors:</strong> Show banner if the products follow these specified brand/vendor rules:
+        <ul>
+          <li>All products must belong to the specified brands/vendors</li>
+          <li>At least one product must belong to the specified brands/vendors</li>
+          <li>None of the products belong to the specified brands/vendors</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Collections:</strong> Show banner if the products follow these specified collections rules:
+        <ul>
+          <li>All products must be part of the specified collections</li>
+          <li>At least one product must be part of the specified collections</li>
+          <li>None of the products are part of the specified collections</li>
+        </ul>
+      </li>
+        
+      </li>
+      <li>
+        <strong>Product Type:</strong> Show banner if the products follow these specified product type rules:
+        <ul>
+          <li>All products must belong to the specified product types</li>
+          <li>At least one product must belong to the specified product types</li>
+          <li>None of the products belong to the specified product types</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="docs-note">
+      <p><strong>Important:</strong> Display rules are applicable based on product classification. The Homepage section does not support product-based rules since it's not tied to specific products.</p>
+    </div>
+
+    <h2>Setting Up Rules</h2>
+    <p>To configure display rules for your banner:</p>
+    <ol>
+      <li>Navigate to the Sections of your banner</li>
+      <li>Select the section where you want to apply rules (Collections, Product pages, or Cart)</li>
+      <li>Press the "Add Rule" button</li>
+      <li>Choose the rule type that matches your targeting needs</li>
+      <li>Select the specific values (tags, brands, collections, or product types)</li>
+      <li>Save your rule</li>
+      <li>Preview your banner to verify the rules work as expected</li>
+    </ol>
+
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> You can combine multiple rules to create highly targeted banner campaigns. For example, show a banner only on winter collection products from a specific brand.</p>
+    </div>
+
+    <h2>Use Cases for Display Rules</h2>
+
+    <div class="docs-info">
+      <h3>Seasonal Campaigns</h3>
+      <p><strong>Seasonal Products:</strong> Show winter collection banners only on winter product pages. Create time-sensitive promotions that automatically appear on relevant products.</p>
+
+      <h3>Brand Promotions</h3>
+      <p><strong>Vendor Targeting:</strong> Target specific vendor promotions to relevant products. Perfect for co-marketing campaigns or highlighting featured brands.</p>
+
+      <h3>Category-Specific Marketing</h3>
+      <p><strong>Collection Banners:</strong> Display category banners only on related collections. Ensure your messaging aligns with the product category customers are browsing.</p>
+
+      <h3>New Product Launches</h3>
+      <p><strong>Tag-Based Targeting:</strong> Use tags to show special banners for new products. Highlight new arrivals, bestsellers, or sale items with precision.</p>
+    </div>
+
+    <h2>Testing Your Rules</h2>
+    <p>Always test your display rules before publishing:</p>
+    <ol>
+      <li>Use the preview function to see your banner on different product pages</li>
+      <li>Verify the banner appears on products that match your rules</li>
+      <li>Confirm the banner doesn't appear on products that shouldn't match</li>
+      <li>Test across different device types to ensure consistent behavior</li>
+    </ol>
+
+    <div class="docs-note">
+      <p><strong>Remember:</strong> Rules take effect immediately upon saving. Always preview your changes before publishing to avoid showing incorrect banners to customers.</p>
+    </div>
+
+    <hr />
+
+    <div class="mt-12 flex gap-4">
+      <a href={`${import.meta.env.BASE_URL}/docs/placement`} class="btn bg-gray-200 text-gray-700 hover:bg-gray-300">
+        ← Previous: Banner Placement
+      </a>
+      <a href={`${import.meta.env.BASE_URL}/docs/advanced-features`} class="btn btn-primary">
+        Next: Advanced Features →
+      </a>
+    </div>
+  </div>
+</DocsLayout>

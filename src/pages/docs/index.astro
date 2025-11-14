@@ -9,15 +9,15 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     <h2>Overview</h2>
     <p>
       Banners All Over is a powerful Shopify app that allows you to create stunning, professional banners to
-      enhance your e-commerce store and convert visitors into customers.
+      enhance your e-commerce store.
     </p>
 
     <h2>Main Navigation</h2>
-    <p>When you enter the app, you'll find six main menu options at the top:</p>
+    <p>When you enter the app, you'll find six main menu options:</p>
     <ul>
       <li><strong>Banners</strong> - The main section where you create and manage your banners</li>
-      <li><strong>Styling</strong> - Customize the general appearance of your banners</li>
       <li><strong>Plan</strong> - View and manage your subscription plan</li>
+      <li><strong>Theme</strong> - Customize the general appearance of your banners</li>
       <li><strong>Settings</strong> - Configure app preferences</li>
       <li><strong>Feedback</strong> - Share your thoughts and suggestions</li>
       <li><strong>Support</strong> - Access help and documentation</li>
@@ -32,31 +32,35 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
         <li>
           <strong>Click the New Banner button</strong>
           <ul>
-            <li>Choose between Slide Banner or Sticky Banner</li>
+            <li>You'll enter the edit mode of the banner</li>
+            <!-- <li>Choose between Slide Banner or Sticky Banner</li> -->
           </ul>
         </li>
         <li>
           <strong>Place the banner in your store</strong>
           <ul>
-            <li>Select target location</li>
-            <li>Position your banner precisely</li>
+            <li>Go to the Sections' panel and select where do you want to display the banner</li>
+            <li>Enter the page preview and place the banner in the desired location</li>
+            <li>Save the position and go back to the banner edition section</li>
           </ul>
         </li>
         <li>
           <strong>Add slides</strong>
           <ul>
-            <li>Add images, text, videos, or products</li>
+            <li>Add slides to your banner</li>
+            <li>Choose the slide type: image, text and image, videos, or products</li>
             <li>Customize each slide's content</li>
           </ul>
         </li>
         <li>
           <strong>Publish your banner</strong>
           <ul>
-            <li>Review your banner</li>
+            <li>Preview your banner live in all responsive modes</li>
             <li>Click Publish to make it live on your store</li>
           </ul>
         </li>
       </ol>
+      <p>Keep reading the documentation for more detailed information and advanced tips.</p>
     </div>
 
     <hr />
@@ -64,12 +68,20 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     <div class="docs-tip">
       <h2>Tips for Success</h2>
       <ul>
-        <li><strong>Responsive Design</strong>: Always preview your banners in all three responsive modes</li>
-        <li><strong>Targeting</strong>: Place the same banner in multiple sections of your e-commerce</li>
-        <li><strong>Performance</strong>: Optimize images for web to ensure fast loading</li>
-        <li><strong>Scheduling</strong>: Use the scheduler for seasonal campaigns and promotions</li>
-        <li><strong>Testing</strong>: Use the preview feature before publishing changes</li>
-        <li><strong>Organization</strong>: Use clear naming conventions for easy banner management</li>
+        <li><strong>Responsive Design</strong>: Always preview your banners in all three responsive modes. 
+          <ul><li>See <a class="text-bao-blue-500 hover:text-bao-purple-500 underline" href={`${import.meta.env.BASE_URL}/docs/creating-banners`}>Creating Banners</a></li></ul>
+        </li>
+        <li><strong>Targeting</strong>: Place the same banner in multiple sections of your e-commerce. 
+          <ul><li>See <a class="text-bao-blue-500 hover:text-bao-purple-500 underline" href={`${import.meta.env.BASE_URL}/docs/placement`}>Banner Placement</a></li></ul>
+        </li>
+        <li><p><strong>Performance</strong>: Optimize images for web to ensure fast loading.</p></li>
+        <li><strong>Scheduling</strong>: Use the scheduler for seasonal campaigns and promotions. 
+          <ul><li>See <a class="text-bao-blue-500 hover:text-bao-purple-500 underline" href={`${import.meta.env.BASE_URL}/docs/settings`}>Banner Settings</a></li></ul>
+        </li>
+        <li><strong>Testing</strong>: Use the preview feature before publishing changes. 
+          <ul><li>See <a class="text-bao-blue-500 hover:text-bao-purple-500 underline" href={`${import.meta.env.BASE_URL}/docs/dashboard`}>Main Dashboard</a></li></ul>
+        </li>
+        <li><strong>Organization</strong>: Use clear naming conventions for easy banner management.</li>
       </ul>
     </div>
 
@@ -78,9 +90,9 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     <h2>Need Help?</h2>
     <p>If you need assistance or have questions not covered in this documentation:</p>
     <ul>
-      <li>Visit the Support section in the app</li>
-      <li>Use the Feedback form to contact our team</li>
-      <li>Check for updates and new features regularly</li>
+      <li>Visit the Support section in the app or <a class="text-bao-blue-500 hover:text-bao-purple-500 underline" href={`${import.meta.env.BASE_URL}/docs/support-feedback`}>here.</a></li>
+      <li>Use the Feedback form to contact our team and suggest improvements.</li>
+      <li>Come back to these documentation pages regularly to check for updates and new features.</li>
     </ul>
 
     <div class="mt-12 flex gap-4">

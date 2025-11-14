@@ -15,55 +15,47 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <li>Cart page</li>
     </ul>
 
-    <div class="docs-tip">
-      <p><strong>Pro Tip:</strong> Different page types serve different purposes. Use hero banners on the homepage, product-specific banners on product pages, and promotional banners on the cart page to maximize conversions.</p>
+    <div class="docs-note">
+      <p><strong>Note:</strong> Different page types serve different purposes. Use hero banners on the homepage, product-specific banners on product pages, and promotional banners on the cart page to maximize conversions.</p>
     </div>
 
-    <hr />
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> For global campaigns that target different areas of your store, include the same banner in different sections.</p>
+    </div>
 
     <h2>Target Positioning</h2>
-    <p>Precisely place your banner using our visual targeting tool:</p>
+    <p>Precisely place your banner using our visual targeting tool. In the Section area:</p>
     <ol>
+      <li>Select and expand the section where you want to place the banner</li>
       <li>Click the <strong>Target</strong> button</li>
-      <li>Navigate to your live store page</li>
-      <li>Hover over different page regions to see placement previews</li>
+      <ul><li>Your live store will open in the same window</li></ul>
+      <li>Hover over different page regions to see the available placement zones</li>
       <li>Click to select desired position</li>
-      <li>Accept placement to return to settings</li>
+      <ul><li>If you don't like the selection, you can remove it and pick a different position</li></ul>
+      <li>Accept the placement to return to settings</li>
     </ol>
 
     <div class="docs-note">
-      <p><strong>Note:</strong> The targeting tool shows you exactly how your banner will look in its final position before you publish it.</p>
+      <p><strong>Note:</strong> The targeting tool provides a glimpse of the first draft of the final position. Use the preview button to check the exact look and feel before publishing.</p>
     </div>
-
-    <hr />
-
-    <h2>Display Rules</h2>
-    <p>Set conditions for banner visibility:</p>
-    <ul>
-      <li>Show only for products with specific rules</li>
-      <li>Filter by tags</li>
-      <li>Filter by brands/vendors</li>
-      <li>Filter by collection</li>
-      <li>Filter by product type</li>
-    </ul>
 
     <div class="docs-info">
-      <h3>Use Cases for Display Rules</h3>
-      <ul>
-        <li><strong>Seasonal Products:</strong> Show winter collection banners only on winter product pages</li>
-        <li><strong>Brand Promotions:</strong> Target specific vendor promotions to relevant products</li>
-        <li><strong>Category-Specific:</strong> Display category banners only on related collections</li>
-        <li><strong>New Arrivals:</strong> Use tags to show special banners for new products</li>
-      </ul>
+      <p><strong>Next Step:</strong> After placing your banner, you can configure <a href={`${import.meta.env.BASE_URL}/docs/rules`} class="text-bao-blue-500 hover:text-bao-purple-500 underline">Display Rules</a> to control when your banners appear based on your customer targeting preferences.</p>
     </div>
-
-    <hr />
 
     <h2>Preview Your Placement</h2>
     <p>Use the preview button to see your banner in its actual position on your live website before publishing.</p>
 
+    <ul>
+      <li>Expand the Section where you have included the banner</li>
+      <li>Click the <strong>Preview</strong> button in the banner settings</li>
+      <li>A new tab will open showing your live store with the banner in place</li>
+      <li>Review the placement and appearance</li>
+      <li>If adjustments are needed, return to the settings to modify the position or design</li>
+    </ul>
+
     <div class="docs-tip">
-      <p><strong>Best Practice:</strong> Always preview your banner on both desktop and mobile devices to ensure proper placement across all screen sizes.</p>
+      <p><strong>Best Practice:</strong> To ensure proper placement across all screen formats, always preview your banner on different window sizes.</p>
     </div>
 
     <hr />
@@ -72,8 +64,8 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <a href={`${import.meta.env.BASE_URL}/docs/settings`} class="btn bg-gray-200 text-gray-700 hover:bg-gray-300">
         ← Previous: Banner Settings
       </a>
-      <a href={`${import.meta.env.BASE_URL}/docs/advanced-features`} class="btn btn-primary">
-        Next: Advanced Features →
+      <a href={`${import.meta.env.BASE_URL}/docs/rules`} class="btn btn-primary">
+        Next: Banner Rules →
       </a>
     </div>
   </div>

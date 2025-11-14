@@ -118,11 +118,32 @@ const { title, description = "Banners All Over - Documentation" } = Astro.props;
     @apply bg-green-50 border-l-4 border-green-400 p-4 my-6 rounded-r;
   }
 
+  :global(.docs-tip p) {
+    @apply mb-0;
+  }
+
   :global(.docs-note) {
     @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6 rounded-r;
   }
 
+  :global(.docs-note p) {
+    @apply mb-0;
+  }
+
   :global(.docs-info) {
     @apply bg-blue-50 border-l-4 border-bao-blue-400 p-4 my-6 rounded-r;
+  }
+
+  :global(.docs-info p) {
+    @apply mb-0;
+  }
+
+  :global(.docs-tip h2),
+  :global(.docs-note h2),
+  :global(.docs-info h2),
+  :global(.docs-tip h3),
+  :global(.docs-note h3),
+  :global(.docs-info h3) {
+    @apply mt-4;
   }
 </style>

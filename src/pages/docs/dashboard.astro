@@ -7,12 +7,12 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
     <h1>Main Dashboard</h1>
 
     <h2>Banner Management Section</h2>
-    <p>The main dashboard provides quick access to all banner functions:</p>
+    <p>The main dashboard provides quick access to all banner functions.</p>
 
     <h3>1. Create New Banner Options</h3>
     <ul>
       <li>New Slide Banner</li>
-      <li>New Sticky Banner</li>
+      <!-- <li>New Sticky Banner</li> -->
     </ul>
 
     <h3>2. Banner List View</h3>
@@ -29,12 +29,17 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <li>Search field for finding specific banners</li>
     </ul>
 
+    <div class="docs-tip">
+      <p><strong>Pro Tip:</strong> Give your banners descriptive titles to be able to easily search them later.</p>
+    </div>
+
     <h3>3. Banner Actions</h3>
     <p>Each banner in the list includes:</p>
     <ul>
       <li><strong>Published/Unpublished label</strong> - Indication of the publish status of the banner</li>
+      <li><strong>Active/Scheduled label</strong> - Indication of the permanently active or scheduled status of the banner</li>
       <li><strong>Preview images</strong> - View a preview of your banner or slides</li>
-      <li><strong>Edit button</strong> - Modify banner content and settings</li>
+      <li><strong>Edit button</strong> - Enter the edition mode and modify the banner's content and settings</li>
       <li><strong>Duplicate button</strong> - Create a copy of the banner</li>
       <li><strong>Delete button</strong> - Remove the banner</li>
     </ul>
@@ -45,10 +50,11 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <li>Detailed preview of each slide</li>
       <li>Active status indicator</li>
       <li>Scheduling information (start and end dates if applicable)</li>
+      <!-- <li>Section where the banner is placed</li> -->
     </ul>
 
-    <div class="docs-tip">
-      <p><strong>Pro Tip:</strong> Use the search and filter features to quickly find specific banners, especially when managing multiple campaigns.</p>
+    <div class="docs-note">
+      <p><strong>Note:</strong> You can click the title of the banner to enter the editing mode.</p>
     </div>
 
     <hr />
