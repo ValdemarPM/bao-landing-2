@@ -39,12 +39,67 @@ import DocsLayout from '../../layouts/DocsLayout.astro';
       <p><strong>Note:</strong> Choose animations that match your brand style. Subtle animations often perform better than flashy ones.</p>
     </div>
 
-    <div class="docs-info">
+    <div class="docs-tip">
       <h3>Recommended Settings</h3>
       <ul>
         <li><strong>Interval time:</strong> 5-7 seconds per slide gives users enough time to read content</li>
         <li><strong>Pause on hover:</strong> Enable this to let users control their viewing experience</li>
         <li><strong>Auto-play:</strong> Great for hero banners, but consider disabling for informational content</li>
+      </ul>
+    </div>
+
+    <h2>Dimensions</h2>
+    <p>Control how your banner dimensions are calculated. Banner dimensions are determined by several factors working together:</p>
+
+    <h3>Default Dimension Factors</h3>
+    <ul>
+      <li><strong>Width:</strong> Defined by the target container you selected for your banner placement</li>
+      <li><strong>Height (with images):</strong> Automatically set based on the uploaded image height for Image or Image and Text slides</li>
+      <li><strong>Height (without images):</strong> Uses the "Banners maximum height" setting from the Theme section</li>
+    </ul>
+
+    <div class="docs-info">
+      <p>The <strong>"Banners maximum height"</strong> is a global setting found in the Theme section. It's an input field where you can set a fixed pixel value that applies to all banners in your store. You can change this value anytime to match your store's design requirements.</p>
+    </div>
+
+    <h3>Height Override Modes</h3>
+    <p>You can override the default dimension behavior by selecting one of these modes:</p>
+    <ul>
+      <li>
+        <strong>Default</strong> - Uses the fixed height defined in "Banners maximum height" from the Theme section
+        <ul>
+          <li>Best for maintaining consistent banner heights across your entire store</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Percentage</strong> - Set the height as a percentage value relative to the container
+        <ul>
+          <li>Ideal for responsive designs that need to adapt to different container sizes</li>
+          <li>Be careful to prevent pixelation - ensure your images have sufficient resolution to scale properly</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Full Window Height</strong> - Makes the banner occupy the full visible window height
+        <ul>
+          <li>Perfect for hero banners, landing pages, and immersive experiences</li>
+          <li>Use sparingly as it can be overwhelming on mobile devices</li>
+          <li>Always test on different screen sizes before publishing</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Custom</strong> - Specify an exact height value in pixels
+        <ul>
+          <li>Use when you need precise control for specific campaigns or design requirements</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="docs-info">
+      <h3>Best Practices</h3>
+      <ul>
+        <li><strong>Image consistency:</strong> Maintain consistent image resolution across all your banners. Use images with a constant height to ensure a uniform appearance throughout your different slides of the banner</li>
+        <li><strong>Testing:</strong> Always preview your banners in different viewport sizes before publishing to ensure they look great everywhere</li>
+        <li><strong>Performance:</strong> Large banner heights can impact page load perception and user experience - optimize your images and test loading times</li>
       </ul>
     </div>
 
