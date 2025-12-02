@@ -3,8 +3,84 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-900 text-white py-8">
-  <div class="container-bao text-center">
-    <p>&copy; {currentYear} Banners All Over. All rights reserved.</p>
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container-bao">
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Banners All Over</h3>
+        <p class="text-gray-400 text-sm mb-4">
+          Create stunning banners for your Shopify store. No coding required.
+        </p>
+        <a
+          href="https://apps.shopify.com/banners-all-over"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block bg-bao-blue hover:bg-bao-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+        >
+          Install App
+        </a>
+      </div>
+
+      <!-- Product Links -->
+      <div>
+        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Product</h4>
+        <ul class="space-y-2">
+          <li><a href="/#features" class="text-gray-400 hover:text-white text-sm transition-colors">Features</a></li>
+          <li><a href="/#pricing" class="text-gray-400 hover:text-white text-sm transition-colors">Pricing</a></li>
+          <li><a href="/#how-it-works" class="text-gray-400 hover:text-white text-sm transition-colors">How It Works</a></li>
+          <li><a href="/docs" class="text-gray-400 hover:text-white text-sm transition-colors">Documentation</a></li>
+        </ul>
+      </div>
+
+      <!-- Support Links -->
+      <div>
+        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Support</h4>
+        <ul class="space-y-2">
+          <li><a href="/docs" class="text-gray-400 hover:text-white text-sm transition-colors">Getting Started</a></li>
+          <li><a href="/docs/support-feedback" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Support</a></li>
+          <li><a href="/docs/account-management" class="text-gray-400 hover:text-white text-sm transition-colors">Account Management</a></li>
+          <li><a href="/docs/advanced-features" class="text-gray-400 hover:text-white text-sm transition-colors">Advanced Features</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal Links -->
+      <div>
+        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="/legal/terms" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a></li>
+          <li><a href="/legal/privacy" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a></li>
+          <li><a href="/legal/cookies" class="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a></li>
+          <li><a href="/legal/refunds" class="text-gray-400 hover:text-white text-sm transition-colors">Refund Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+
+        <!-- Copyright -->
+        <p class="text-gray-400 text-sm">
+          &copy; {currentYear} Banners All Over. All rights reserved.
+        </p>
+
+        <!-- Legal Links (Mobile) -->
+        <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-400">
+          <a href="/legal/terms" class="hover:text-white transition-colors">Terms</a>
+          <span>•</span>
+          <a href="/legal/privacy" class="hover:text-white transition-colors">Privacy</a>
+          <span>•</span>
+          <a href="/legal/cookies" class="hover:text-white transition-colors">Cookies</a>
+          <span>•</span>
+          <a href="/legal/refunds" class="hover:text-white transition-colors">Refunds</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </footer>
