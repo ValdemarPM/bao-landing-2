@@ -6,7 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-12">
-      <a href="/" class="inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
+      <a href={import.meta.env.BASE_URL} class="inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
         </svg>
@@ -142,7 +142,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </p>
           <ul class="list-disc pl-6 text-gray-700 space-y-1">
             <li>Email: <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></li>
-            <li>Support Form: <a href="/docs/support-feedback" class="text-bao-blue hover:underline">Contact Support</a></li>
+            <li>Support Form: <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></li>
           </ul>
         </div>
 
@@ -366,7 +366,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">7.3 Requesting Data Deletion</h3>
         <p class="text-gray-700">
-          You can request immediate deletion of your data by contacting us at <a href="mailto:privacy@bannersallover.com" class="text-bao-blue hover:underline">privacy@bannersallover.com</a>. We will process your request within 30 days as outlined in our <a href="/legal/privacy" class="text-bao-blue hover:underline">Privacy Policy</a>.
+          You can request immediate deletion of your data by contacting us at <a href="mailto:privacy@bannersallover.com" class="text-bao-blue hover:underline">privacy@bannersallover.com</a>. We will process your request within 30 days as outlined in our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a>.
         </p>
       </section>
 
@@ -423,7 +423,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="text-gray-700 mb-2"><strong>Banners All Over Support</strong></p>
           <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></p>
           <p class="text-gray-700 mb-2"><strong>Billing Email:</strong> <a href="mailto:billing@bannersallover.com" class="text-bao-blue hover:underline">billing@bannersallover.com</a></p>
-          <p class="text-gray-700 mb-2"><strong>Support Form:</strong> <a href="/docs/support-feedback" class="text-bao-blue hover:underline">Contact Support</a></p>
+          <p class="text-gray-700 mb-2"><strong>Support Form:</strong> <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></p>
           <p class="text-gray-700"><strong>Response Time:</strong> Within 1-2 business days (Priority support for Business plan customers)</p>
         </div>
       </section>
@@ -452,12 +452,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
 
         <div class="grid gap-4 md:grid-cols-2">
-          <a href="/legal/terms" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <a href={`${import.meta.env.BASE_URL}legal/terms`} class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
             <h3 class="font-semibold text-bao-blue mb-1">Terms of Service</h3>
             <p class="text-sm text-gray-600">Legal terms governing use of our service</p>
           </a>
 
-          <a href="/legal/privacy" class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
             <h3 class="font-semibold text-bao-blue mb-1">Privacy Policy</h3>
             <p class="text-sm text-gray-600">How we handle your personal data</p>
           </a>
