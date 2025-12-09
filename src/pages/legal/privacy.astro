@@ -6,7 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-12">
-      <a href={import.meta.env.BASE_URL} class="inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
+      <a href={import.meta.env.BASE_URL} class="nav-link inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
         </svg>
@@ -18,7 +18,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </div>
 
     <!-- Content -->
-    <div class="prose prose-lg max-w-none">
+    <div class="legal-content prose prose-lg max-w-none">
 
       <!-- Introduction -->
       <section class="mb-8">
@@ -141,7 +141,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li>Provide a cookie consent banner before setting non-essential cookies</li>
           <li>Allow you to manage your cookie preferences</li>
           <li>Update this Privacy Policy with detailed cookie information</li>
-          <li>Publish a separate <a href={`${import.meta.env.BASE_URL}legal/cookies`} class="text-bao-blue hover:underline">Cookie Policy</a></li>
+          <li>Publish a separate <a href={`${import.meta.env.BASE_URL}/legal/cookies`} class="text-bao-blue hover:underline">Cookie Policy</a></li>
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.4 Information We Do NOT Collect</h3>
@@ -321,7 +321,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">5.2 Business Transfers</h3>
         <p class="text-gray-700 mb-4">
-          If we are involved in a merger, acquisition, asset sale, or bankruptcy, your information may be transferred as part of that transaction. We will notify you of any such change and any choices you may have.
+          If we are involved in a merger, acquisition, asset sale, or bankruptcy, your information may be transferred as part of that transaction. We will notify you with advance notice of any such change and any options you may have.
         </p>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">5.3 Legal Requirements</h3>
@@ -356,7 +356,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 class="text-2xl font-bold text-gray-900 mb-4">6. International Data Transfers</h2>
 
         <p class="text-gray-700 mb-4">
-          Your information may be transferred to, stored, and processed in countries other than your country of residence, including [SPECIFY COUNTRIES/REGIONS WHERE DATA IS STORED].
+          Your information may be transferred to, stored, and processed in countries other than your country of residence, including the United States (New Mexico).
         </p>
 
         <p class="text-gray-700 mb-4">
@@ -375,7 +375,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </ul>
 
         <p class="text-gray-700">
-          You may request a copy of the safeguards we have in place by contacting us at the details provided in Section 14.
+          You may request a copy of the safeguards we have in place by <a href="#contact-us" class="text-bao-blue hover:underline font-semibold">contacting us</a> (see Section 14).
         </p>
       </section>
 
@@ -565,7 +565,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h3 class="text-xl font-semibold text-gray-800 mb-3">9.3 How to Exercise Your Rights</h3>
 
         <p class="text-gray-700 mb-4">
-          To exercise any of these rights, please contact us using the methods provided in Section 14. You may also manage some of your information directly through:
+          To exercise any of these rights, please <a href="#contact-us" class="text-bao-blue hover:underline font-semibold">contact us</a> (see Section 14). You may also manage some of your information directly through:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li><strong>In-App Settings:</strong> Update banner content and configurations directly in the app</li>
@@ -595,7 +595,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
 
         <p class="text-gray-700">
-          If you believe we may have information from or about a child under 18, please contact us immediately at the details provided in Section 14.
+          If you believe we may have information from or about a child under 18, please <a href="#contact-us" class="text-bao-blue hover:underline font-semibold">contact us immediately</a> (see Section 14).
         </p>
       </section>
 
@@ -664,8 +664,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           We will disclose which third-party AI service providers we use (e.g., OpenAI, Anthropic, Stability AI) and provide links to their privacy policies.
         </p>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">13.2 AI Training Data</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">13.2 Current Commitment</h3>
         <p class="text-gray-700 mb-4">
+          As AI features are not yet implemented, no content is currently being processed by AI services. We will update this Privacy Policy and notify you before launching any AI features that process your data.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">13.3 AI Training Data</h3>
+        <p class="text-gray-700">
           We will clearly state whether:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
@@ -675,14 +680,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li>How AI-generated content ownership is handled</li>
         </ul>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">13.3 Current Commitment</h3>
-        <p class="text-gray-700">
-          As AI features are not yet implemented, no content is currently being processed by AI services. We will update this Privacy Policy and notify you before launching any AI features that process your data.
-        </p>
+        
       </section>
 
       <!-- Contact Information -->
-      <section class="mb-8">
+      <section id="contact-us" class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">14. Contact Us</h2>
 
         <p class="text-gray-700 mb-4">
@@ -694,7 +696,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <p class="text-gray-700"><strong>Data Controller:</strong> [Legal Entity Name]</p>
           <p class="text-gray-700"><strong>Address:</strong> [Physical Mailing Address - Required by GDPR]</p>
           <p class="text-gray-700"><strong>Privacy Email:</strong> <a href="mailto:privacy@bannersallover.com" class="text-bao-blue hover:underline">privacy@bannersallover.com</a></p>
-          <p class="text-gray-700"><strong>General Support:</strong> <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Form</a></p>
+          <p class="text-gray-700"><strong>General Support:</strong> <a href={`${import.meta.env.BASE_URL}/docs/support-feedback`} class="text-bao-blue hover:underline">Contact Form</a></p>
           <p class="text-gray-700"><strong>EU Representative:</strong> [If required under GDPR Article 27]</p>
           <p class="text-gray-700"><strong>Data Protection Officer:</strong> [If applicable]</p>
         </div>
@@ -756,6 +758,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .prose a {
     transition: all 0.2s;
+  }
+
+  /* Enhanced link styling for legal content */
+  .legal-content a:not(.nav-link):not(.card-link) {
+    text-decoration: underline;
+    text-decoration-color: rgba(19, 134, 242, 0.4);
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .legal-content a:not(.nav-link):not(.card-link):hover {
+    color: rgb(13, 95, 184); /* darker blue */
+    text-decoration-color: rgb(13, 95, 184);
+  }
+
+  /* External link indicator */
+  .legal-content a[target="_blank"]:not(.nav-link):not(.card-link)::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.85em;
+    opacity: 0.7;
   }
 
   .prose ul, .prose table {

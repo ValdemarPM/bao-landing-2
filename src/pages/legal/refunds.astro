@@ -2,29 +2,29 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Refund & Cancellation Policy - Banners All Over" description="Refund and Cancellation Policy for Banners All Over Shopify app subscriptions">
+<BaseLayout title="Subscriptions and Refunds Policy - Banners All Over" description="Subscriptions and Refunds Policy for Banners All Over Shopify app subscriptions">
   <div class="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-12">
-      <a href={import.meta.env.BASE_URL} class="inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
+      <a href={import.meta.env.BASE_URL} class="nav-link inline-flex items-center text-bao-blue hover:text-bao-blue-600 transition-colors mb-6">
         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
         </svg>
         Back to Home
       </a>
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Refund & Cancellation Policy</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Subscriptions and Refunds Policy</h1>
       <p class="text-gray-600">Last Updated: December 2, 2025</p>
     </div>
 
     <!-- Content -->
-    <div class="prose prose-lg max-w-none">
+    <div class="legal-content prose prose-lg max-w-none">
 
       <!-- Introduction -->
       <section class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
 
         <p class="text-gray-700 mb-4">
-          This Refund and Cancellation Policy explains how subscriptions to Banners All Over ("we," "us," "our," or "BAO") work, how you can cancel your subscription, and under what circumstances refunds are provided.
+          This Subscriptions and Refunds Policy explains how subscriptions to Banners All Over ("we," "us," "our," or "BAO") work, how you can cancel your subscription, and under what circumstances refunds are provided.
         </p>
 
         <p class="text-gray-700 mb-4">
@@ -61,8 +61,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             </p>
           </div>
 
-          <div class="bg-gray-50 p-4 rounded-lg border-2 border-bao-blue">
-            <h4 class="font-semibold text-gray-800">Pro Plan <span class="text-xs bg-bao-blue text-white px-2 py-1 rounded">MOST POPULAR</span></h4>
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-gray-800">Pro Plan</h4>
             <p class="text-sm text-gray-700 mb-1">
               <strong>Monthly:</strong> $40/month (discounted to $30/month)
             </p>
@@ -96,11 +96,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.4 Automatic Renewal</h3>
         <p class="text-gray-700 mb-4">
-          Your subscription will automatically renew at the end of each billing period unless you cancel before the renewal date. You will be charged the then-current price for your subscription plan.
+          Your subscription will automatically renew at the end of each billing period unless you cancel before the renewal date by downgrading to the Free Plan or uninstalling the app (see Section 3). You will be charged the then-current price for your subscription plan.
         </p>
 
         <p class="text-gray-700">
-          <strong>Renewal Notifications:</strong> We may send you a reminder before your subscription renews, but you are responsible for tracking your renewal date and canceling if you no longer wish to continue.
+          <strong>Renewal Notifications:</strong> We may send you a reminder before your subscription renews, but you are responsible for tracking your renewal date and taking action (downgrading or uninstalling) if you no longer wish to continue with a paid plan.
         </p>
       </section>
 
@@ -108,76 +108,209 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <section class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Cancellation Policy</h2>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.1 How to Cancel</h3>
+        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.1 Canceling Your Paid Plan (Downgrade to Free)</h3>
+
         <p class="text-gray-700 mb-4">
-          You can cancel your Banners All Over subscription at any time using one of the following methods:
+          If you want to stop being charged but continue using Banners All Over with basic features, downgrading to the <strong>Free Basic Plan</strong> is the recommended option. This allows you to:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+          <li><strong>Stop all charges:</strong> The Free Plan is free forever—no billing required</li>
+          <li><strong>Keep using the app:</strong> Continue with limited banners and slides (see our <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline">Pricing section</a> for exact limits)</li>
+          <li><strong>Preserve your data:</strong> All your banners and settings are retained (excess banners are disabled but not deleted)</li>
+          <li><strong>Re-upgrade anytime:</strong> Easily return to a paid plan whenever you need more features</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">3.1.1 How to Downgrade</h4>
+        <p class="text-gray-700 mb-4">
+          To downgrade to the Free Basic Plan:
+        </p>
+        <ol class="list-decimal pl-6 text-gray-700 space-y-2 mb-4">
+          <li>Open the <strong>Banners All Over</strong> app in your Shopify admin</li>
+          <li>Go to <strong>Settings</strong> or <strong>Account</strong></li>
+          <li>Click <strong>Change Plan</strong> or <strong>Manage Subscription</strong></li>
+          <li>Select <strong>Free Basic Plan</strong></li>
+          <li>Confirm your downgrade</li>
+        </ol>
+
+        <p class="text-gray-700 mb-4">
+          <strong>When does it take effect?</strong> Your downgrade takes effect at the <strong>end of your current billing period</strong>. Until then, you continue to have full access to your current plan's features.
         </p>
 
-        <div class="bg-blue-50 p-6 rounded-lg mb-4">
-          <h4 class="font-semibold text-gray-800 mb-3">Method 1: Through Shopify Admin (Recommended)</h4>
-          <ol class="list-decimal pl-6 text-gray-700 space-y-2">
-            <li>Log in to your Shopify admin panel</li>
-            <li>Go to <strong>Apps</strong> in the left sidebar</li>
-            <li>Find <strong>Banners All Over</strong> in your installed apps</li>
-            <li>Click the <strong>Delete</strong> or <strong>Uninstall</strong> button</li>
-            <li>Confirm the uninstallation</li>
-          </ol>
-        </div>
+        <p class="text-gray-700 mb-4">
+          <strong>When do charges stop?</strong> You will be charged the current plan price for the remainder of this billing period, then <strong>no charges</strong> starting from your next billing cycle (since the Free Plan is free).
+        </p>
 
-        <div class="bg-blue-50 p-6 rounded-lg mb-4">
-          <h4 class="font-semibold text-gray-800 mb-3">Method 2: Through Shopify Billing Settings</h4>
-          <ol class="list-decimal pl-6 text-gray-700 space-y-2">
-            <li>Log in to your Shopify admin panel</li>
-            <li>Go to <strong>Settings</strong> → <strong>Billing</strong></li>
-            <li>Find <strong>Banners All Over</strong> under App charges</li>
-            <li>Click <strong>Cancel subscription</strong></li>
-            <li>Confirm the cancellation</li>
-          </ol>
-        </div>
+        <p class="text-gray-700 mb-4">
+          <strong>Important:</strong> Downgrading is not refundable for the current billing period; you will only be charged the new lower price (free) starting from your next billing cycle.
+        </p>
 
-        <div class="bg-blue-50 p-6 rounded-lg mb-4">
-          <h4 class="font-semibold text-gray-800 mb-3">Method 3: Contact Support</h4>
-          <p class="text-gray-700 mb-2">
-            If you need assistance canceling, contact our support team:
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">3.1.2 What Happens to Your Data</h4>
+        <p class="text-gray-700 mb-4">
+          When you downgrade to the Free Basic Plan:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+          <li><strong>All Data Retained:</strong> Your banner data, settings, and media files are never deleted</li>
+          <li><strong>Free Plan Limits:</strong> The Free Plan allows fewer banners and slides than paid plans (see our <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline">Pricing section</a> for exact limits)</li>
+          <li><strong>Excess Banners Disabled:</strong> Banners or slides exceeding the Free Plan limits will be <strong>disabled but not deleted</strong></li>
+          <li><strong>Easy Recovery:</strong> Your excess banners remain in your account and will be automatically re-enabled if you upgrade back to a higher plan</li>
+          <li><strong>Visible in Dashboard:</strong> Disabled banners will appear in your dashboard marked as "Disabled - requires Standard Plan or higher"</li>
+        </ul>
+
+        <p class="text-gray-700 mb-4">
+          <strong>For Paid Plan Subscribers:</strong> When downgrading between plans or to the Free Plan, any banners exceeding your new plan's limit will be disabled but retained. For exact banner and slide limits for each plan, please refer to our <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline">Pricing section</a>.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">3.2 Completely Removing the App (Uninstallation)</h3>
+
+        <div class="bg-red-50 p-4 mb-4 rounded border border-red-200">
+          <p class="text-gray-700">
+            <strong>Warning:</strong> Only choose this option if you want to completely terminate your use of Banners All Over. Consider downgrading to the Free Plan instead (see Section 3.1).
           </p>
-          <ul class="list-disc pl-6 text-gray-700 space-y-1">
-            <li>Email: <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></li>
-            <li>Support Form: <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></li>
+        </div>
+
+        <p class="text-gray-700 mb-4">
+          If you've decided to completely remove Banners All Over from your Shopify store, you can uninstall the app through your Shopify admin:
+        </p>
+
+        <ol class="list-decimal pl-6 text-gray-700 space-y-2 mb-4">
+          <li>Log in to your Shopify admin panel</li>
+          <li>Go to <strong>Apps</strong> in the left sidebar</li>
+          <li>Find <strong>Banners All Over</strong> in your installed apps</li>
+          <li>Click the <strong>Delete</strong> or <strong>Uninstall</strong> button</li>
+          <li>Confirm the uninstallation</li>
+        </ol>
+
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">What Happens When You Uninstall</h4>
+        <p class="text-gray-700 mb-4">
+          When you uninstall the Banners All Over app:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+          <li><strong>Immediate Effect:</strong> Your subscription is canceled immediately upon uninstallation</li>
+          <li><strong>No Further Charges:</strong> You will not be charged for any future billing cycles</li>
+          <li><strong>Loss of Access:</strong> You will lose access to the app and all its features immediately</li>
+          <li><strong>Data Retention:</strong> Your data is retained for 30 days in case you reinstall (see Section 7 for details)</li>
+          <li><strong>Permanent Deletion:</strong> After 30 days, all your banner data, settings, and media files are permanently deleted and cannot be recovered</li>
+        </ul>
+
+        <div class="bg-red-50 p-4 mb-4 rounded border border-red-200">
+        <p class="text-gray-700">
+          <strong>⚠️ Important:</strong> Unlike some subscription services, uninstalling the app means you lose access immediately, regardless of whether you've paid for the current billing period.
+        </p>
+        <p class="text-gray-700">
+          If you want to continue using the app until the end of your paid period, keep the app installed until that date, or downgrade to the Free Plan instead.
+        </p>
+        </div>
+
+        <p class="text-gray-700 mb-4">
+          <strong>Need assistance?</strong> If you need help canceling or have questions about your options, please <a href="#questions-support" class="text-bao-blue hover:underline font-semibold">contact our support team</a>.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">3.3 Comparison: Downgrade vs. Uninstall</h3>
+        <p class="text-gray-700 mb-4">
+          Not sure whether to downgrade or completely uninstall? Here's a quick comparison to help you decide:
+        </p>
+
+        <div class="overflow-x-auto mb-6">
+          <table class="min-w-full bg-white border border-gray-300 rounded-lg">
+            <thead class="bg-gray-100">
+              <tr>
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 border-b">Aspect</th>
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 border-b">Downgrade to Free</th>
+                <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900 border-b">Complete Uninstall</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">When effective?</td>
+                <td class="px-4 py-3 text-sm text-gray-700">End of current billing period</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Immediately</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Charges stop when?</td>
+                <td class="px-4 py-3 text-sm text-gray-700">End of current period</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Immediately</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Your banners</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Disabled but kept (can re-enable if upgrade)</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Permanently deleted after 30 days</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Slides and media</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Disabled but kept</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Permanently deleted after 30 days</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Can you use the app?</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Yes, with limited banners and slides (see Pricing)</td>
+                <td class="px-4 py-3 text-sm text-gray-700">No access to app</td>
+              </tr>
+              <tr class="border-b bg-gray-50">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Data recovery window</td>
+                <td class="px-4 py-3 text-sm text-gray-700">N/A (always preserved)</td>
+                <td class="px-4 py-3 text-sm text-gray-700">30 days (reinstall to recover)</td>
+              </tr>
+              <tr class="border-b">
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Can you change your mind?</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Yes, upgrade anytime</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Yes, reinstall within 30 days</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 text-sm font-semibold text-gray-800">Recommended for...</td>
+                <td class="px-4 py-3 text-sm text-gray-700">Testing features, cost savings, seasonal use</td>
+                <td class="px-4 py-3 text-sm text-gray-700">No longer need banners at all</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4 rounded">
+          <h4 class="font-semibold text-gray-900 mb-2">Decision Helper</h4>
+          <p class="text-sm text-gray-700 mb-2"><strong>Choose downgrade if you:</strong></p>
+          <ul class="list-disc pl-6 text-sm text-gray-700 mb-3 space-y-1">
+            <li>Want to save money but might need banners again in the future</li>
+            <li>Only need limited features (Free Plan has fewer banners/slides than paid plans)</li>
+            <li>Might upgrade during peak seasons or promotional periods</li>
+            <li>Want to keep your banner designs and settings for later use</li>
+          </ul>
+          <p class="text-sm text-gray-700 mb-2"><strong>Choose uninstall if you:</strong></p>
+          <ul class="list-disc pl-6 text-sm text-gray-700 space-y-1">
+            <li>Definitely don't need banners in the foreseeable future</li>
+            <li>Want to completely remove the app from your Shopify admin</li>
+            <li>Have already saved all content you need</li>
           </ul>
         </div>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.2 Effect of Cancellation</h3>
-
-        <h4 class="text-lg font-semibold text-gray-700 mb-2">Monthly Subscriptions:</h4>
-        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Immediate Effect:</strong> When you cancel, your subscription remains active until the end of your current billing period</li>
-          <li><strong>Access:</strong> You can continue to use all features of your paid plan until the end of the period you've already paid for</li>
-          <li><strong>No Further Charges:</strong> You will not be charged for the next billing cycle</li>
-          <li><strong>Automatic Downgrade:</strong> After your paid period ends, your account automatically downgrades to the Free Basic plan</li>
-        </ul>
-
-        <h4 class="text-lg font-semibold text-gray-700 mb-2">Annual Subscriptions:</h4>
-        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Immediate Effect:</strong> When you cancel, your subscription remains active until the end of your annual period</li>
-          <li><strong>Access:</strong> You retain full access to your plan's features for the remainder of the year you've paid for</li>
-          <li><strong>No Renewal:</strong> Your subscription will not renew for another year</li>
-          <li><strong>Automatic Downgrade:</strong> After your annual period ends, you'll be moved to the Free Basic plan</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.3 Downgrading Plans</h3>
         <p class="text-gray-700 mb-4">
-          Instead of canceling completely, you can downgrade to a lower-tier plan:
+          <strong>Our Recommendation:</strong> We recommend downgrading to the Free Plan unless you're certain you'll never use the app again. This preserves your work and gives you flexibility for the future.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-3 mt-8">3.4 Changing Your Plan or Getting Help</h3>
+
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">Re-Upgrading from Free Plan</h4>
+        <p class="text-gray-700 mb-4">
+          You can upgrade from the Free Plan to any paid plan at any time:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li>Downgrade takes effect at the end of your current billing period</li>
-          <li>You continue to have access to your current plan's features until the billing period ends</li>
-          <li>You will be charged the lower price starting from the next billing cycle</li>
-          <li>Any banners or slides exceeding the new plan's limits will be disabled (but not deleted)</li>
+          <li><strong>How to Upgrade:</strong> Open the app, go to Settings or Account, and select your desired paid plan</li>
+          <li><strong>Billing:</strong> Your new billing period starts immediately upon upgrade</li>
+          <li><strong>Data Restoration:</strong> Your previously disabled banners and slides become accessible again automatically when you upgrade to the same plan you had before</li>
+          <li><strong>No Data Loss:</strong> Your banners, settings, and media are preserved exactly as you left them</li>
         </ul>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">3.4 Re-Subscribing</h3>
-        <p class="text-gray-700">
-          You can re-subscribe to any paid plan at any time by reinstalling the app or upgrading from within the app settings. Re-subscribing will start a new billing period immediately.
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">Reinstalling After Uninstall</h4>
+        <p class="text-gray-700 mb-4">
+          If you uninstalled the app but changed your mind:
+        </p>
+        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
+          <li><strong>Within 30 Days:</strong> Reinstall the app from the Shopify App Store, and your data will be automatically restored</li>
+          <li><strong>After 30 Days:</strong> Your data has been permanently deleted. You can still reinstall, but you'll start fresh with a new account</li>
+          <li><strong>Billing:</strong> Reinstalling starts a new subscription and billing period</li>
+        </ul>
+
+        <h4 class="text-lg font-semibold text-gray-800 mb-3">Need Help Deciding?</h4>
+        <p class="text-gray-700 mb-4">
+          If you're unsure whether to downgrade, uninstall, or which plan is right for you, please <a href="#questions-support" class="text-bao-blue hover:underline font-semibold">contact our support team</a>. We're happy to discuss options for continuing to use Banners All Over or help you make the best decision for your needs.
         </p>
       </section>
 
@@ -191,20 +324,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
 
         <p class="text-gray-700 mb-4">
-          <strong>Annual Subscriptions:</strong> [SPECIFY REFUND POLICY - Options below]
+          <strong>Annual Subscriptions:</strong> Generally non-refundable. When you cancel, you retain access through the end of your paid annual period, which serves as your "money's worth." However, refunds may be granted at our discretion in special circumstances outlined in Section 4.2 below.
         </p>
-
-        <div class="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400 mb-4">
-          <p class="text-sm text-gray-800">
-            <strong>Note to Business Owner:</strong> Please specify your annual refund policy. Common options:
-          </p>
-          <ul class="text-sm text-gray-700 mt-2 space-y-1">
-            <li><strong>Option A:</strong> Non-refundable, but service continues through paid period</li>
-            <li><strong>Option B:</strong> Pro-rated refund for unused months (minus a processing fee)</li>
-            <li><strong>Option C:</strong> Full refund within 30 days of purchase, pro-rated after 30 days</li>
-            <li><strong>Option D:</strong> Full refund within 7-14 days, no refunds after that period</li>
-          </ul>
-        </div>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">4.2 Exceptions and Special Circumstances</h3>
         <p class="text-gray-700 mb-4">
@@ -242,9 +363,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li><strong>Duplicate purchases:</strong> You subscribed to multiple plans by mistake (but we can help you cancel duplicates)</li>
           <li><strong>Violation of Terms:</strong> Your account was terminated for violating our Terms of Service</li>
           <li><strong>User error:</strong> Misunderstanding of features, failure to configure properly, or not reading documentation</li>
-          <li><strong>Dissatisfaction with results:</strong> The app didn't improve your sales or conversions as hoped</li>
+          <li><strong>Dissatisfied with the results:</strong> The app didn't improve your sales or conversions as you expected.</li>
           <li><strong>Forgot to cancel:</strong> You forgot to cancel before auto-renewal (but we can help you cancel going forward)</li>
           <li><strong>Minor bugs or issues:</strong> Small bugs that don't prevent core functionality and are being addressed</li>
+          <li><strong>Price changes:</strong> Requesting a refund or price adjustment due to recent changes in subscription pricing</li>
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">4.4 How to Request a Refund</h3>
@@ -254,9 +376,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <ol class="list-decimal pl-6 text-gray-700 mb-4 space-y-3">
           <li>
-            <strong>Contact Support:</strong>
+            <strong>Contact Support:</strong> <a href="#questions-support" class="text-bao-blue hover:underline font-semibold">See section 8</a> for contact details
             <ul class="list-disc pl-6 mt-2 space-y-1">
-              <li>Email: <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></li>
               <li>Subject line: "Refund Request"</li>
             </ul>
           </li>
@@ -335,7 +456,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">6.3 Your Options</h3>
         <p class="text-gray-700">
-          If you do not agree to a price increase, you may cancel your subscription before the new price takes effect. Your continued use of the service after the price increase date constitutes acceptance of the new pricing.
+          If you do not agree to a price increase, you may downgrade your subscription before the new price takes effect. Your continued use of the service after the price increase date constitutes acceptance of the new pricing.
         </p>
       </section>
 
@@ -349,8 +470,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li><strong>Data Retention:</strong> All your banner data and settings are retained</li>
-          <li><strong>Banners Exceeding Limits:</strong> Banners and slides beyond the Free plan limits (2 banners, 2 slides each) will be <strong>disabled but not deleted</strong></li>
-          <li><strong>Re-upgrade:</strong> If you re-subscribe to a paid plan, all previously created banners become accessible again</li>
+          <li><strong>Banners Exceeding Limits:</strong> Banners and slides beyond the Free plan limits will be <strong>disabled but not deleted</strong></li>
+          <li><strong>Re-upgrade:</strong> If you re-subscribe to a paid plan, your previously created banners will become accessible again, depending on the previous plan and the newly renewed plan</li>
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">7.2 Complete Uninstallation</h3>
@@ -361,59 +482,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li><strong>Grace Period:</strong> We retain your data for <strong>30 days</strong> in case you reinstall</li>
           <li><strong>Permanent Deletion:</strong> After 30 days, all your banner data, settings, and media files are <strong>permanently deleted</strong></li>
           <li><strong>No Recovery:</strong> After permanent deletion, we cannot recover your data</li>
-          <li><strong>Backup Recommendation:</strong> Export any content you wish to keep before uninstalling</li>
+          <li><strong>Backup Recommendation:</strong> Save a copy of any content you wish to keep before uninstalling</li>
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">7.3 Requesting Data Deletion</h3>
         <p class="text-gray-700">
-          You can request immediate deletion of your data by contacting us at <a href="mailto:privacy@bannersallover.com" class="text-bao-blue hover:underline">privacy@bannersallover.com</a>. We will process your request within 30 days as outlined in our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a>.
-        </p>
-      </section>
-
-      <!-- EU Consumer Rights -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. European Union Consumer Rights</h2>
-
-        <p class="text-gray-700 mb-4">
-          If you are a consumer based in the European Union, you have additional rights under EU consumer protection law:
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.1 14-Day Withdrawal Right</h3>
-        <p class="text-gray-700 mb-4">
-          Under the EU Consumer Rights Directive, you have the right to withdraw from your subscription within 14 days of subscribing, without giving any reason.
-        </p>
-
-        <p class="text-gray-700 mb-4">
-          <strong>To exercise your withdrawal right:</strong>
-        </p>
-        <ol class="list-decimal pl-6 text-gray-700 mb-4 space-y-2">
-          <li>Send a clear statement of your decision to withdraw to <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></li>
-          <li>Include "EU Withdrawal Right" in the subject line</li>
-          <li>Provide your Shopify store URL and subscription details</li>
-        </ol>
-
-        <p class="text-gray-700 mb-4">
-          <strong>Refund Processing:</strong> We will refund all payments received from you within 14 days of receiving your withdrawal notice.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.2 Exception: Service Fully Performed</h3>
-        <p class="text-gray-700 mb-4">
-          If you have requested that the service begins immediately upon subscription (which is standard for SaaS apps), you acknowledge that:
-        </p>
-        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li>You may lose your withdrawal right if the service is fully performed before the 14-day period ends</li>
-          <li>However, you may still cancel and receive a pro-rated refund for the unused portion of the subscription period</li>
-        </ul>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.3 Statutory Rights</h3>
-        <p class="text-gray-700">
-          Nothing in this policy affects your statutory rights under EU law. Any terms that attempt to exclude rights you have under EU consumer protection legislation are void.
+          You can request immediate deletion of your data by <a href="#questions-support" class="text-bao-blue hover:underline font-semibold">contacting us</a>. We will process your request within 30 days as outlined in our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a>.
         </p>
       </section>
 
       <!-- Contact for Billing Questions -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Questions and Support</h2>
+      <section id="questions-support" class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Questions and Support</h2>
 
         <p class="text-gray-700 mb-4">
           If you have any questions about billing, cancellations, or refunds, please contact us:
@@ -430,7 +510,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <!-- Shopify Billing -->
       <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Shopify Billing System</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Shopify Billing System</h2>
 
         <p class="text-gray-700 mb-4">
           All subscription billing is managed through Shopify's secure billing system. For questions about:
@@ -445,19 +525,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <!-- Related Policies -->
       <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Related Policies</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Related Policies</h2>
 
         <p class="text-gray-700 mb-4">
           For more information, please review our other policies:
         </p>
 
         <div class="grid gap-4 md:grid-cols-2">
-          <a href={`${import.meta.env.BASE_URL}legal/terms`} class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <a href={`${import.meta.env.BASE_URL}legal/terms`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
             <h3 class="font-semibold text-bao-blue mb-1">Terms of Service</h3>
             <p class="text-sm text-gray-600">Legal terms governing use of our service</p>
           </a>
 
-          <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+          <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
             <h3 class="font-semibold text-bao-blue mb-1">Privacy Policy</h3>
             <p class="text-sm text-gray-600">How we handle your personal data</p>
           </a>
@@ -466,10 +546,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
       <!-- Updates to Policy -->
       <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Changes to This Policy</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Changes to This Policy</h2>
 
         <p class="text-gray-700 mb-4">
-          We may update this Refund and Cancellation Policy from time to time. Changes will be communicated through:
+          We may update this Subscriptions and Refunds Policy from time to time. Changes will be communicated through:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
           <li>Update to the "Last Updated" date at the top of this page</li>
@@ -486,13 +566,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="mt-12 p-6 bg-blue-50 border-l-4 border-bao-blue rounded">
         <h3 class="font-bold text-gray-900 mb-2">Quick Summary</h3>
         <ul class="text-sm text-gray-700 space-y-2">
-          <li><strong>Cancel Anytime:</strong> No long-term contracts. Cancel through Shopify admin anytime.</li>
-          <li><strong>Access Through Paid Period:</strong> Continue using features until the end of your paid billing period.</li>
+          <li><strong>Cancel Paid Plans Anytime:</strong> No long-term contracts. Downgrade to Free Plan or uninstall through Shopify admin anytime.</li>
+          <li><strong>Recommended: Downgrade to Free Plan:</strong> Stop charges while keeping limited features. All your data is preserved. See <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline">Pricing</a> for exact limits.</li>
+          <li><strong>Downgrade Timing:</strong> Takes effect at end of billing period. Continue using current plan features until then.</li>
+          <li><strong>Uninstall Option:</strong> Immediate cancellation and loss of access. Data retained for 30 days, then permanently deleted.</li>
           <li><strong>Monthly Plans:</strong> Generally non-refundable, but you keep access through the period you paid for.</li>
           <li><strong>Annual Plans:</strong> [Specify your refund terms]</li>
           <li><strong>Exceptions:</strong> Refunds may be granted for technical issues, service discontinuation, or incompatibility.</li>
-          <li><strong>EU Customers:</strong> 14-day withdrawal right under EU consumer law.</li>
-          <li><strong>Data Retention:</strong> 30-day grace period before permanent deletion after uninstall.</li>
         </ul>
       </div>
 
@@ -515,6 +595,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   .prose h2 {
     border-bottom: 2px solid #e5e7eb;
     padding-bottom: 0.5rem;
+  }
+
+  /* Enhanced link styling for legal content */
+  .legal-content a:not(.nav-link):not(.card-link) {
+    text-decoration: underline;
+    text-decoration-color: rgba(19, 134, 242, 0.4);
+    text-underline-offset: 2px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .legal-content a:not(.nav-link):not(.card-link):hover {
+    color: rgb(13, 95, 184); /* darker blue */
+    text-decoration-color: rgb(13, 95, 184);
+  }
+
+  /* External link indicator */
+  .legal-content a[target="_blank"]:not(.nav-link):not(.card-link)::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.85em;
+    opacity: 0.7;
   }
 
   .prose a {
