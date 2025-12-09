@@ -13,7 +13,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Back to Home
       </a>
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Subscriptions and Refunds Policy</h1>
-      <p class="text-gray-600">Last Updated: December 2, 2025</p>
+      <p class="text-gray-600">Last Updated: December 9, 2025</p>
     </div>
 
     <!-- Content -->
@@ -42,45 +42,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.1 Available Plans</h3>
         <p class="text-gray-700 mb-4">
-          Banners All Over offers four subscription tiers:
+          Banners All Over offers four subscription tiers: Basic (Free), Standard, Pro, and Business. Each tier includes different features, banner limits, and pricing options.
         </p>
 
-        <div class="space-y-3 mb-4">
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h4 class="font-semibold text-gray-800">Basic Plan - FREE</h4>
-            <p class="text-sm text-gray-700">Limited features, no billing required</p>
-          </div>
-
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h4 class="font-semibold text-gray-800">Standard Plan</h4>
-            <p class="text-sm text-gray-700 mb-1">
-              <strong>Monthly:</strong> $20/month (discounted to $15/month)
-            </p>
-            <p class="text-sm text-gray-700">
-              <strong>Annual:</strong> $240/year (discounted to $180/year - save 25%)
-            </p>
-          </div>
-
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h4 class="font-semibold text-gray-800">Pro Plan</h4>
-            <p class="text-sm text-gray-700 mb-1">
-              <strong>Monthly:</strong> $40/month (discounted to $30/month)
-            </p>
-            <p class="text-sm text-gray-700">
-              <strong>Annual:</strong> $480/year (discounted to $360/year - save 25%)
-            </p>
-          </div>
-
-          <div class="bg-gray-50 p-4 rounded-lg">
-            <h4 class="font-semibold text-gray-800">Business Plan</h4>
-            <p class="text-sm text-gray-700 mb-1">
-              <strong>Monthly:</strong> $200/month (discounted to $150/month)
-            </p>
-            <p class="text-sm text-gray-700">
-              <strong>Annual:</strong> $2,400/year (discounted to $1,800/year - save 25%)
-            </p>
-          </div>
-        </div>
+        <p class="text-gray-700 mb-4">
+          For current pricing details, including monthly and annual billing options, please visit our <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline font-semibold">Pricing page</a>.
+        </p>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.2 Billing Cycles</h3>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
@@ -91,7 +58,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.3 Payment Processing</h3>
         <p class="text-gray-700 mb-4">
-          All payments are processed by Shopify through their app billing system. We do not directly handle or store your payment information. For questions about payment processing, please refer to <a href="https://www.shopify.com/legal/terms-payments-us" class="text-bao-blue hover:underline" target="_blank" rel="noopener noreferrer">Shopify's Payment Terms</a>.
+          All payments are processed by Shopify through their app billing system. We do not directly handle or store your payment information.
+        </p>
+        <p class="text-gray-700 mb-4">
+          For questions about payment processing, please refer to <a href="https://www.shopify.com/legal/terms-payments-us" class="text-bao-blue hover:underline" target="_blank" rel="noopener noreferrer">Shopify's Payment Terms</a>.
         </p>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">2.4 Automatic Renewal</h3>
@@ -496,16 +466,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Questions and Support</h2>
 
         <p class="text-gray-700 mb-4">
-          If you have any questions about billing, cancellations, or refunds, please contact us:
+          If you have any questions about billing, cancellations, or refunds, please see the <a href={`${import.meta.env.BASE_URL}legal/privacy#contact-us`} class="text-bao-blue hover:underline font-semibold">contact information in our Privacy Policy</a>.
         </p>
 
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <p class="text-gray-700 mb-2"><strong>Banners All Over Support</strong></p>
-          <p class="text-gray-700 mb-2"><strong>Email:</strong> <a href="mailto:support@bannersallover.com" class="text-bao-blue hover:underline">support@bannersallover.com</a></p>
-          <p class="text-gray-700 mb-2"><strong>Billing Email:</strong> <a href="mailto:billing@bannersallover.com" class="text-bao-blue hover:underline">billing@bannersallover.com</a></p>
-          <p class="text-gray-700 mb-2"><strong>Support Form:</strong> <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></p>
-          <p class="text-gray-700"><strong>Response Time:</strong> Within 1-2 business days (Priority support for Business plan customers)</p>
-        </div>
+        <p class="text-gray-700">
+          For billing-specific inquiries, you can email us at <a href="mailto:billing@bannersallover.com" class="text-bao-blue hover:underline">billing@bannersallover.com</a> or use our <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">support form</a>.
+        </p>
       </section>
 
       <!-- Shopify Billing -->
@@ -521,27 +487,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           <li><strong>Billing disputes:</strong> Contact both Shopify Support and our support team</li>
           <li><strong>Updating payment info:</strong> Manage through your Shopify admin → Settings → Billing</li>
         </ul>
-      </section>
-
-      <!-- Related Policies -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Related Policies</h2>
-
-        <p class="text-gray-700 mb-4">
-          For more information, please review our other policies:
-        </p>
-
-        <div class="grid gap-4 md:grid-cols-2">
-          <a href={`${import.meta.env.BASE_URL}legal/terms`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-            <h3 class="font-semibold text-bao-blue mb-1">Terms of Service</h3>
-            <p class="text-sm text-gray-600">Legal terms governing use of our service</p>
-          </a>
-
-          <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-            <h3 class="font-semibold text-bao-blue mb-1">Privacy Policy</h3>
-            <p class="text-sm text-gray-600">How we handle your personal data</p>
-          </a>
-        </div>
       </section>
 
       <!-- Updates to Policy -->

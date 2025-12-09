@@ -13,7 +13,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Back to Home
       </a>
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Cookie Policy</h1>
-      <p class="text-gray-600">Last Updated: December 2, 2025</p>
+      <p class="text-gray-600">Last Updated: December 9, 2025</p>
     </div>
 
     <!-- Content -->
@@ -350,36 +350,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Questions About Cookies</h2>
 
         <p class="text-gray-700 mb-4">
-          If you have any questions about our use of cookies or this Cookie Policy, please contact us:
+          If you have any questions about our use of cookies or this Cookie Policy, please see the <a href={`${import.meta.env.BASE_URL}legal/privacy#contact-us`} class="text-bao-blue hover:underline font-semibold">contact information in our Privacy Policy</a>.
         </p>
 
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <p class="text-gray-700 mb-2"><strong>Banners All Over</strong></p>
-          <p class="text-gray-700 mb-2">Email: <a href="mailto:privacy@bannersallover.com" class="text-bao-blue hover:underline">privacy@bannersallover.com</a></p>
-          <p class="text-gray-700 mb-2">Privacy Policy: <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">View Privacy Policy</a></p>
-          <p class="text-gray-700">Support: <a href={`${import.meta.env.BASE_URL}docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></p>
-        </div>
-      </section>
-
-      <!-- Related Policies -->
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Related Policies</h2>
-
-        <p class="text-gray-700 mb-4">
-          For more information about how we handle your data, please review our other policies:
+        <p class="text-gray-700">
+          For information about how we handle your data, please review our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a> and <a href={`${import.meta.env.BASE_URL}legal/terms`} class="text-bao-blue hover:underline">Terms of Service</a>.
         </p>
-
-        <div class="grid gap-4 md:grid-cols-2">
-          <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-            <h3 class="font-semibold text-bao-blue mb-1">Privacy Policy</h3>
-            <p class="text-sm text-gray-600">How we collect, use, and protect your data</p>
-          </a>
-
-          <a href={`${import.meta.env.BASE_URL}legal/terms`} class="card-link block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-            <h3 class="font-semibold text-bao-blue mb-1">Terms of Service</h3>
-            <p class="text-sm text-gray-600">Legal terms governing your use of our service</p>
-          </a>
-        </div>
       </section>
 
       <!-- Summary -->

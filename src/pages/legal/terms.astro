@@ -13,7 +13,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         Back to Home
       </a>
       <h1 class="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-      <p class="text-gray-600">Last Updated: December 2, 2025</p>
+      <p class="text-gray-600">Last Updated: December 9, 2025</p>
     </div>
 
     <!-- Content -->
@@ -76,26 +76,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </ul>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">3.2 Subscription Tiers</h3>
-        <p class="text-gray-700 mb-2">
-          Banners All Over is offered through four subscription tiers:
-        </p>
-        <div class="bg-gray-50 pt-1 pr-1 pb-1 pl-4 rounded-lg mb-2">
-          <ul class="space-y-2 text-gray-700">
-            <li><strong>Basic Plan (Free):</strong> 2 banners, 2 slides each, Image & Image+Text types, Homepage placement only</li>
-            <li><strong>Standard Plan:</strong> 10 banners, 5 slides each, additional placement options and features</li>
-            <li><strong>Pro Plan:</strong> 30 banners, 10 slides each, Video & Product types, advanced features</li>
-            <li><strong>Business Plan:</strong> Unlimited banners and slides, all page placements, priority support</li>
-          </ul>
-        </div>
         <p class="text-gray-700 mb-4">
-          Each tier includes specific limitations on the number of banners, slides, banner types, and placement options. For current pricing details, including monthly and annual billing options, please visit:
+          Banners All Over is offered through four subscription tiers: Basic (Free), Standard, Pro, and Business. Each tier includes specific features, banner limits, and pricing options.
         </p>
-        <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li><strong>Pricing Page:</strong> <a href={`${import.meta.env.BASE_URL}/#pricing`} class="text-bao-blue hover:underline">View Pricing Plans</a></li>
-          <li><strong>Shopify App Store:</strong> <a href="https://apps.shopify.com/banners-all-over" target="_blank" rel="noopener noreferrer" class="text-bao-blue hover:underline">Banners All Over Listing</a></li>
-        </ul>
         <p class="text-gray-700 mb-4">
-          <strong>Note:</strong> All paid plans are billed in <strong>USD (United States Dollars)</strong>. Annual billing provides approximately <strong>20% savings</strong> compared to monthly billing.
+          For detailed information about subscription tiers, features, pricing, billing cycles, and cancellation options, please see our <a href={`${import.meta.env.BASE_URL}legal/refunds`} class="text-bao-blue hover:underline font-semibold">Subscriptions and Refunds Policy</a> or visit our <a href={`${import.meta.env.BASE_URL}#pricing`} class="text-bao-blue hover:underline font-semibold">Pricing page</a>.
         </p>
 
         <h3 class="text-xl font-semibold text-gray-800 mb-3">3.3 Service Availability</h3>
@@ -108,29 +93,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <section class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Payment Terms and Billing</h2>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.1 Billing Through Shopify</h3>
         <p class="text-gray-700 mb-4">
-          All payments for Banners All Over subscriptions are processed through Shopify's billing system. By subscribing to a paid plan, you authorize Shopify to charge the applicable fees to your Shopify account.
+          All payments for Banners All Over subscriptions are processed through Shopify's billing system. Subscriptions automatically renew at the end of each billing period unless you cancel before the renewal date.
         </p>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.2 Subscription Renewals</h3>
         <p class="text-gray-700 mb-4">
-          Subscriptions automatically renew at the end of each billing period (monthly or annually) unless you cancel before the renewal date. You will be charged the then-current rate for your selected plan tier.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.3 Price Changes</h3>
-        <p class="text-gray-700 mb-4">
-          We reserve the right to modify our pricing at any time. Price changes will take effect at the start of your next billing cycle. We will provide at least 30 days' advance notice of any price increases. Your continued use of the Service after a price change constitutes acceptance of the new pricing.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.4 Taxes</h3>
-        <p class="text-gray-700 mb-4">
-          All fees are exclusive of applicable taxes, levies, or duties. You are responsible for paying all such taxes associated with your subscription, except for taxes based on our net income.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">4.5 Refunds and Cancellations</h3>
-        <p class="text-gray-700">
-          Please refer to our <a href={`${import.meta.env.BASE_URL}legal/refunds`} class="text-bao-blue hover:underline">Subscriptions and Refunds Policy</a> for detailed information about cancellations, refunds, and related procedures.
+          For comprehensive information about billing, subscription management, payment processing, price changes, taxes, cancellations, and refunds, please see our <a href={`${import.meta.env.BASE_URL}legal/refunds`} class="text-bao-blue hover:underline font-semibold">Subscriptions and Refunds Policy</a>.
         </p>
       </section>
 
@@ -235,7 +203,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </section>
 
       <!-- AI Features -->
-      <section class="mb-8">
+      <section id="ai-features" class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">7. AI-Powered Features (Future)</h2>
 
         <p class="text-gray-700 mb-4">
@@ -274,36 +242,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <section class="mb-8">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Privacy and Data Protection</h2>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.1 Privacy Policy</h3>
         <p class="text-gray-700 mb-4">
-          Our collection, use, and protection of your personal information is governed by our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a>, which is incorporated into these Terms by reference. Please review our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline">Privacy Policy</a> to understand our data practices.
+          Our collection, use, and protection of your personal information is governed by our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline font-semibold">Privacy Policy</a>, which is incorporated into these Terms by reference.
         </p>
 
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.2 Shopify Data Access</h3>
         <p class="text-gray-700 mb-4">
-          By installing Banners All Over, you authorize us to access certain data from your Shopify store as necessary to provide the Service. This may include store information, product catalog data, and other information required for banner functionality.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.3 Data Security</h3>
-        <p class="text-gray-700 mb-4">
-          We implement reasonable security measures to protect your data. However, no system is completely secure, and we cannot guarantee absolute security of your information.
-        </p>
-
-        <h3 class="text-xl font-semibold text-gray-800 mb-3">8.4 Data Retention and Deletion</h3>
-        <p class="text-gray-700 mb-4">
-          Upon termination of your account, we will retain your data for 30 days before permanently deleting it, unless we are required to retain it longer for legal, regulatory, or backup purposes. The data that will be permanently deleted includes:
+          By installing Banners All Over, you authorize us to access certain data from your Shopify store as necessary to provide the Service. For detailed information about:
         </p>
         <ul class="list-disc pl-6 text-gray-700 mb-4 space-y-2">
-          <li>All banners and banner configurations you created</li>
-          <li>Uploaded images and media files</li>
-          <li>Text content, headlines, and copy added to banners</li>
-          <li>All creative content included in or generated through the app</li>
-          <li>Banner settings, display rules, and scheduling configurations</li>
-          <li>Customization preferences (themes, colors, fonts, animations)</li>
-          <li>Any other user-generated content stored within the Service</li>
+          <li>What data we collect and how we use it</li>
+          <li>Data security measures</li>
+          <li>Data retention periods and deletion procedures</li>
+          <li>Your privacy rights and how to exercise them</li>
+          <li>Cookie usage and tracking technologies</li>
         </ul>
         <p class="text-gray-700">
-          The data deletion is permanent and cannot be reversed. You may request deletion of your data at any time as described in our Privacy Policy. 
+          Please review our <a href={`${import.meta.env.BASE_URL}legal/privacy`} class="text-bao-blue hover:underline font-semibold">Privacy Policy</a>.
         </p>
       </section>
 
@@ -550,14 +504,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         <h2 class="text-2xl font-bold text-gray-900 mb-4">16. Contact Information</h2>
 
         <p class="text-gray-700 mb-4">
-          If you have any questions about these Terms, please contact us at:
+          If you have any questions about these Terms, please see the <a href={`${import.meta.env.BASE_URL}legal/privacy#contact-us`} class="text-bao-blue hover:underline font-semibold">contact information in our Privacy Policy</a>.
         </p>
 
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <p class="text-gray-700 mb-2"><strong>Banners All Over</strong></p>
-          <p class="text-gray-700 mb-2">Email: <a href="mailto:legal@bannersallover.com" class="text-bao-blue hover:underline">legal@bannersallover.com</a></p>
-          <p class="text-gray-700">Support: <a href={`${import.meta.env.BASE_URL}/docs/support-feedback`} class="text-bao-blue hover:underline">Contact Support</a></p>
-        </div>
+        <p class="text-gray-700">
+          For legal-specific inquiries, you can email us at <a href="mailto:legal@bannersallover.com" class="text-bao-blue hover:underline">legal@bannersallover.com</a>.
+        </p>
       </section>
 
       <!-- Acknowledgment -->
